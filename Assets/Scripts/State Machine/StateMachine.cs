@@ -1,12 +1,15 @@
+using System;
 using UnityEngine;
 
 public abstract class StateMachine : MonoBehaviour
 {
-    private State currentState;
+    protected State currentState;
+    protected State prevState;
 
     public void SwitchState(State state)
     {
         currentState?.Exit();
+        prevState = currentState;
         currentState = state;
         currentState?.Enter();
     }
