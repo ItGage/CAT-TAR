@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Spike : Interactable
+public class LaneLocker : Interactable
 {
     public override void PlayerInteraction()
     {

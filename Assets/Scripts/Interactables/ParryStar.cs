@@ -1,0 +1,40 @@
+using UnityEngine;
+
+public class ParryStar : Interactable
+{
+    [Header("Is It A Special Star?")]
+    public bool isSpecial = false;
+    private bool parried = false, canParry = false;
+
+
+    private void Awake()
+    {
+        if (isSpecial) sr.sprite = spriteArray[1];
+    }
+    public override void PlayerInteraction()
+    {
+        canParry = true;
+    }
+
+    private void Update()
+    {
+        if (canParry)
+        {
+            //If player parries
+                //parried=true;
+                //if(isSpecial) Player.Health.PlusParryCount();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //if player parried than return before you apply daamge
+        if (parried) return;
+
+        GameObject other = collision.gameObject;
+        if (other.CompareTag("Player"))
+        {
+
+        }
+    }
+}
