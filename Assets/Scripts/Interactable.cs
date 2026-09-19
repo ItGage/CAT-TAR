@@ -9,7 +9,7 @@ public abstract class Interactable : MonoBehaviour
     public Sprite[] spriteArray;
     public SpriteRenderer sr;
 
-    private GameObject player;
+    protected GameObject player;
 
     public virtual void Awake()
     {
@@ -31,7 +31,7 @@ public abstract class Interactable : MonoBehaviour
             endOfTrack();
         }
     }
-    
+    //destroy interactable at the end of the lane
     public virtual void endOfTrack()
     {
         Destroy(gameObject);
