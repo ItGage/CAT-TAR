@@ -7,8 +7,9 @@ public class ParryStar : Interactable
     private bool parried = false, canParry = false;
 
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         if (isSpecial) sr.sprite = spriteArray[1];
     }
     public override void PlayerInteraction()
@@ -34,7 +35,7 @@ public class ParryStar : Interactable
         GameObject other = collision.gameObject;
         if (other.CompareTag("Player"))
         {
-
+            //Player.Health.TakeDmg(damage;)
         }
     }
 }

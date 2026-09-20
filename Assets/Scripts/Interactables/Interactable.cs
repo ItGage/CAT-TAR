@@ -8,6 +8,8 @@ public abstract class Interactable : MonoBehaviour
     [Header("Setup")]
     public Sprite[] spriteArray;
     public SpriteRenderer sr;
+    [Tooltip("The amount of time needed to play the FX before destroying the interactable"), Min(0)]
+    public float FXTimer;
 
     protected GameObject player;
 
