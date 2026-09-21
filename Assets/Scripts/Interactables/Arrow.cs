@@ -10,6 +10,7 @@ public class Arrow : Interactable
         Right,
         Down
     }
+
     [Header("Direction")]
     public Direction dir;
     public override void Awake()
