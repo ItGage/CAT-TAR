@@ -40,9 +40,6 @@ public class Conductor : MonoBehaviour
     {
         secondsPerBeat = 60f / beatsPerMin;
         secondsPerSixteenth = secondsPerBeat / 4;
-
-
-
     }
 
     // Update is called once per frame
@@ -52,10 +49,7 @@ public class Conductor : MonoBehaviour
         songPositionInSeconds = (float)(AudioSettings.dspTime - songStartDSPTime);
         songPositionInSixteenths = songPositionInSeconds / secondsPerSixteenth;
         totalSixteenth = (int)Mathf.Floor(songPositionInSixteenths);
-
-
-
-            }
+    }
 
     public void StartSong() 
     {
