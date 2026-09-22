@@ -21,9 +21,11 @@ public class ParryStar : Interactable
     {
         if (canParry)
         {
-            //If player parries
-                //parried=true;
-                if(isSpecial) hp.PlusParryCount();
+            if (player.canBeHit)
+            {
+                parried = true;
+                if (isSpecial) hp.PlusParryCount();
+            }
         }
     }
 

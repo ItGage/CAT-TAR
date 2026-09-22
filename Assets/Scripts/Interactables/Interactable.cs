@@ -13,15 +13,18 @@ public abstract class Interactable : MonoBehaviour
 
     protected Health hp;
 
-    protected GameObject player;
+    protected GameObject playerObject;
+
+    protected Player player;
 
     public virtual void Awake()
     {
         //finds player gameobject
-        player = GameObject.Find("Player");
-        if (player!=null)
+        playerObject = GameObject.Find("Player");
+        if (playerObject!=null)
         {
-            hp = player.GetComponent<Health>();
+            hp = playerObject.GetComponent<Health>();
+            player = playerObject.GetComponent<Player>();
         }
     }
 
