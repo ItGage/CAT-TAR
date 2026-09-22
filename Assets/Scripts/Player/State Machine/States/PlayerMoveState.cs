@@ -10,6 +10,7 @@ public class PlayerMoveState : PlayerBaseState
 
         // Subscribe Listeners
         stateMachine.input.JumpPerformed += stateMachine.SwitchToJumpState;
+        stateMachine.input.ParryPerformed += stateMachine.SwitchToParryState;
 
         stateMachine.input.MoveLeftPerformed += player.MovePlayerLeft;
         stateMachine.input.MoveRightPerformed += player.MovePlayerRight;
@@ -26,6 +27,7 @@ public class PlayerMoveState : PlayerBaseState
 
         // Unsubscribe Listeners
         stateMachine.input.JumpPerformed -= stateMachine.SwitchToJumpState;
+        stateMachine.input.ParryPerformed -= stateMachine.SwitchToParryState;
 
         stateMachine.input.MoveLeftPerformed -= player.MovePlayerLeft;
         stateMachine.input.MoveRightPerformed -= player.MovePlayerRight;

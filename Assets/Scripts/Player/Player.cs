@@ -9,18 +9,27 @@ public class Player : MonoBehaviour
     [SerializeField] private InputReader playerInput;
 
     [Header("Movement Variables")]
+    public bool canBeHit;
+    [Space(5)]
     public float moveDistance;
     public float rightMaxDistance;
     public float leftMaxDistance;
     [Space(5)]
     public float jumpLength;
-    public float jumpDistance;
+    public float jumpTime;
+    [Space(5)]
+    public float parryTime;
 
     private float playerX;
     private float playerY;
 
     #region Movement Functions
 
+    public void SetInvincibility(bool hit)
+    {
+        canBeHit = hit;
+    }
+    
     public void MovePlayerLeft()
     {
 
@@ -44,13 +53,13 @@ public class Player : MonoBehaviour
 
     public void MovePlayerUp() 
     {
-        playerY = transform.position.y + jumpDistance;
+        playerY = transform.position.y + jumpLength;
         transform.position = new Vector2(transform.position.x, playerY);
     }
 
     public void MovePlayerDown()
     {
-        playerY = transform.position.y - jumpDistance;
+        playerY = transform.position.y - jumpLength;
         transform.position = new Vector2(transform.position.x, playerY);
     }
 

@@ -17,11 +17,12 @@ public class PlayerJumpState : PlayerBaseState
         // Enter Logic
         jumpTimer = 0f;
         player.MovePlayerUp();
+        player.SetInvincibility(true);
     }
 
     public override void Tick()
     {
-        if(jumpTimer < player.jumpLength)
+        if(jumpTimer < player.jumpTime)
         {
             //jumpTimer += (float)AudioSettings.dspTime;
             jumpTimer += Time.deltaTime;
@@ -42,6 +43,7 @@ public class PlayerJumpState : PlayerBaseState
 
         // Exit Logic
         player.MovePlayerDown();
+        player.SetInvincibility(false);
     }
 }
 
