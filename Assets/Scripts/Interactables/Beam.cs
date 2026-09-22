@@ -12,8 +12,11 @@ public class Beam : Interactable
     {
         if (inTrigger)
         {
-            //If not in jump state than
-                //player.Health.TakeDmg(damage);
+            //change to not jumping when bool is set
+            if(!player.canBeHit)
+            {
+                hp.TakeDmg(damage);
+            }
         }
     }
 
