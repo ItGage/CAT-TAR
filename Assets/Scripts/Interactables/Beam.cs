@@ -2,20 +2,21 @@ using UnityEngine;
 
 public class Beam : Interactable
 {
-    private bool inTrigger = false;
+    private bool inTrigger = false, hasDealtDmg=false;
     public override void PlayerInteraction()
     {
-        inTrigger = true;
+        inTrigger = true; 
     }
 
     private void Update()
     {
-        if (inTrigger)
+        if (inTrigger && !hasDealtDmg)
         {
             //change to not jumping when bool is set
             if(!player.canBeHit)
             {
                 hp.TakeDmg(damage);
+                hasDealtDmg = true;
             }
         }
     }
