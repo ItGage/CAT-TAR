@@ -23,6 +23,9 @@ public class Conductor : MonoBehaviour
     //Instance
     public static Conductor instance;
 
+    //Testing
+    private int previousSixteenth = -1;
+
 
     private void Awake() 
     {
@@ -40,6 +43,7 @@ public class Conductor : MonoBehaviour
     {
         secondsPerBeat = 60f / beatsPerMin;
         secondsPerSixteenth = secondsPerBeat / 4;
+        StartSong();
     }
 
     // Update is called once per frame
@@ -49,6 +53,17 @@ public class Conductor : MonoBehaviour
         songPositionInSeconds = (float)(AudioSettings.dspTime - songStartDSPTime);
         songPositionInSixteenths = songPositionInSeconds / secondsPerSixteenth;
         totalSixteenth = (int)Mathf.Floor(songPositionInSixteenths);
+
+        if (totalSixteenth != previousSixteenth)
+        {
+            Debug.Log(
+                "Measure: " + GetCurrentMeasure() +
+                " Beat: " + GetCurrentBeat() +
+                " Sixteenth: " + GetCurrentSixteenth()
+            );
+
+            previousSixteenth = totalSixteenth;
+        }
     }
 
     public void StartSong() 
