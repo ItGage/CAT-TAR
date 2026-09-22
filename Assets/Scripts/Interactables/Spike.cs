@@ -4,7 +4,6 @@ public class Spike : Interactable
 {
     public override void PlayerInteraction()
     {
-        //player.Health.TakeDmg(damage);
-        throw new System.NotImplementedException();
+        hp.TakeDmg(damage);
     }
 }

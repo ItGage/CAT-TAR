@@ -23,7 +23,7 @@ public class ParryStar : Interactable
         {
             //If player parries
                 //parried=true;
-                //if(isSpecial) Player.Health.PlusParryCount();
+                if(isSpecial) hp.PlusParryCount();
         }
     }
 
@@ -35,7 +35,7 @@ public class ParryStar : Interactable
         GameObject other = collision.gameObject;
         if (other.CompareTag("Player"))
         {
-            //Player.Health.TakeDmg(damage;)
+            hp.TakeDmg(damage);
         }
     }
 }

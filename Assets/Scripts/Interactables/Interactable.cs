@@ -11,12 +11,18 @@ public abstract class Interactable : MonoBehaviour
     [Tooltip("The amount of time needed to play the FX before destroying the interactable"), Min(0)]
     public float FXTimer;
 
+    protected Health hp;
+
     protected GameObject player;
 
     public virtual void Awake()
     {
         //finds player gameobject
-        //player = GameObject.Find("Player");
+        player = GameObject.Find("Player");
+        if (player!=null)
+        {
+            hp = player.GetComponent<Health>();
+        }
     }
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
