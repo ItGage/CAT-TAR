@@ -19,9 +19,11 @@ public class ParryStar : Interactable
 
     private void Update()
     {
+        //checks if player is in the collider
         if (canParry)
         {
-            if (player.canBeHit)
+            //Checks if player parries
+            if (player.GetState() == PlayerState.parrying)
             {
                 parried = true;
                 if (isSpecial) hp.PlusParryCount();

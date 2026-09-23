@@ -10,10 +10,11 @@ public class Beam : Interactable
 
     private void Update()
     {
+        //Checks if player is in the beam collider and hasn't taken damage from it yet
         if (inTrigger && !hasDealtDmg)
         {
-            //change to not jumping when bool is set
-            if(!player.canBeHit)
+            //Checks if player is not jumping
+            if(player.GetState() != PlayerState.jumping)
             {
                 hp.TakeDmg(damage);
                 hasDealtDmg = true;
