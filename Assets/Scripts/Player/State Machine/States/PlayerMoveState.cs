@@ -8,12 +8,16 @@ public class PlayerMoveState : PlayerBaseState
     {
         Debug.Log("Entering 'Move State'");
 
+        // Set Player State
+        player.SetState(PlayerState.baseState);
+
         // Subscribe Listeners
         stateMachine.input.JumpPerformed += stateMachine.SwitchToJumpState;
         stateMachine.input.ParryPerformed += stateMachine.SwitchToParryState;
 
         stateMachine.input.MoveLeftPerformed += player.MovePlayerLeft;
         stateMachine.input.MoveRightPerformed += player.MovePlayerRight;
+       
     }
 
     public override void Tick()
