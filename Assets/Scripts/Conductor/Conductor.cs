@@ -74,6 +74,7 @@ public class Conductor : MonoBehaviour
 
     }
 
+    //Gives Measure, Beat, and Sixteenth indexes
     public int GetCurrentMeasure()
     {
         return totalSixteenth / 16;
@@ -93,4 +94,22 @@ public class Conductor : MonoBehaviour
     {
         return GetSixteenthInMeasure() % 4;
     }
+    
+    //Gives time based on Measure, Beat, and/or Sixteenth indexes
+    public float GetTimeAtPosition(int measure, int beat, int sixteenth)
+    {
+        int targetSixteenth =
+            (measure * 16) +
+            (beat * 4) +
+            sixteenth;
+
+        return targetSixteenth * secondsPerSixteenth;
+    }
+
+    public float GetTimeAtSixteenth(int totalSixteenth)
+    {
+        return totalSixteenth * secondsPerSixteenth;
+    }
+
+
 }
