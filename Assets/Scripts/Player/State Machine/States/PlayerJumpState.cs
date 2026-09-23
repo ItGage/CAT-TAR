@@ -10,14 +10,16 @@ public class PlayerJumpState : PlayerBaseState
     {
         Debug.Log("Entering 'Jump State'");
 
-        // Subscribe Listeners
-        input.MoveLeftPerformed += player.MovePlayerLeft;
-        input.MoveRightPerformed += player.MovePlayerRight;
-
-        // Enter Logic
         jumpTimer = 0f;
         player.MovePlayerUp();
         player.SetInvincibility(true);
+
+        // Set Player State
+        player.SetState(PlayerState.jumping);
+
+        // Subscribe Listeners
+        input.MoveLeftPerformed += player.MovePlayerLeft;
+        input.MoveRightPerformed += player.MovePlayerRight;
     }
 
     public override void Tick()
@@ -37,13 +39,12 @@ public class PlayerJumpState : PlayerBaseState
     {
         Debug.Log("Exiting 'Jump State'");
 
+        player.MovePlayerDown();
+        player.SetInvincibility(false);
+
         // Unsubscribe Listeners
         input.MoveLeftPerformed -= player.MovePlayerLeft;
         input.MoveRightPerformed -= player.MovePlayerRight;
-
-        // Exit Logic
-        player.MovePlayerDown();
-        player.SetInvincibility(false);
     }
 }
 

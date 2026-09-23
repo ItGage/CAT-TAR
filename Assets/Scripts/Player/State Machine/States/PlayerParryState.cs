@@ -10,6 +10,9 @@ public class PlayerParryState : PlayerBaseState
     {
         Debug.Log("Entering 'Parry State'");
 
+        // Set Player State
+        player.SetState(PlayerState.parrying);
+
         // Enter Logic
         parryTimer = 0f;
         player.MovePlayerDown();
