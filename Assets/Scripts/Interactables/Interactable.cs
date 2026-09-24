@@ -24,10 +24,8 @@ public abstract class Interactable : MonoBehaviour
         playerObject = GameObject.Find("Player");
         if (playerObject!=null)
         {
-            //Change HP reference to get it from player
-            hp = playerObject.GetComponent<Health>();
             player = playerObject.GetComponent<Player>();
-            //player.playerhealth
+            hp = player.GetHealth();
         }
     }
 
