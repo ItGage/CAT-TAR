@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerStateMachine playerStateMachine;
     [SerializeField] private GameObject playerSprite;
     [SerializeField] private GameObject playerCollider;
+    [SerializeField] private AttackMeter attackMeter;
 
     [Header("Movement Variables")]
     public bool canBeHit;
@@ -43,21 +44,6 @@ public class Player : MonoBehaviour
         rightBounds = (playerStartingPos.x + (moveDistance * 2f)) + 1f;
     }
 
-    public void SetState(PlayerState state)
-    {
-        currentState = state;
-    }
-
-    public PlayerState GetState()
-    {
-        return currentState;
-    }
-
-    public void SetAnimation(String animationName)
-    {
-        playerAnimator.Play(animationName);
-    }
-
     public void SetInvincibility(bool hit)
     {
         canBeHit = hit;
@@ -68,10 +54,48 @@ public class Player : MonoBehaviour
         playerStateMachine.SwitchToHitState();
     }
 
+    #region Setters
+
+    public void SetState(PlayerState state)
+    {
+        currentState = state;
+    }
+
+    public void SetAnimation(String animationName)
+    {
+        playerAnimator.Play(animationName);
+    }
+
+    #endregion
+
+    #region Getters
+
+    public PlayerState GetState()
+    {
+        return currentState;
+    }
+
     public Health GetHealth()
     {
         return playerHealth;
     }
+
+    public InputReader GetInput()
+    {
+        return playerInput;
+    }
+
+    public Animator GetAnimator()
+    {
+        return playerAnimator;
+    }
+
+    public AttackMeter GetAttackMeter()
+    {
+        return attackMeter;
+    }
+
+    #endregion
 
     #region "Playing" Functions
 
