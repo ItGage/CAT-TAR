@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackMeter : MonoBehaviour
 {
@@ -10,12 +12,16 @@ public class AttackMeter : MonoBehaviour
     [Space(5)]
     [SerializeField] private float currentScore;
 
-
-[Header("Note Increments")]
+    [Header("Note Increments")]
     [SerializeField] private float baseIncrement;
     [SerializeField] private float badMultiplier;
     [SerializeField] private float goodMultiplier;
     [SerializeField] private float perfectMultiplier;
+
+    [Header("UI Elements")]
+    [SerializeField] private Slider slider;
+
+    private float percent;
 
     public void BadHit()
     {
@@ -44,5 +50,10 @@ public class AttackMeter : MonoBehaviour
         {
             currentScore = maxScore;
         }
+    }
+
+    private void UpdateSlider()
+    {
+
     }
 }

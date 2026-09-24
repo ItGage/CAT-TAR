@@ -68,6 +68,11 @@ public class Player : MonoBehaviour
         playerStateMachine.SwitchToHitState();
     }
 
+    public Health GetHealth()
+    {
+        return playerHealth;
+    }
+
     #region "Playing" Functions
 
     public void PlayUp()
