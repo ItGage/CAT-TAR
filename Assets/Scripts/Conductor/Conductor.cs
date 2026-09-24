@@ -56,11 +56,11 @@ public class Conductor : MonoBehaviour
 
         if (totalSixteenth != previousSixteenth)
         {
-            Debug.Log(
+            /*Debug.Log(
                 "Measure: " + GetCurrentMeasure() +
                 " Beat: " + GetCurrentBeat() +
                 " Sixteenth: " + GetCurrentSixteenth()
-            );
+            );*/
 
             previousSixteenth = totalSixteenth;
         }
