@@ -38,7 +38,7 @@ public abstract class Interactable : MonoBehaviour
             PlayerInteraction();
         }
         //checks if collided with end of track and destroys gameobject if true
-        else if (other.CompareTag("end"))
+        else if (other.CompareTag("End"))
         {
             endOfTrack();
         }

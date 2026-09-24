@@ -53,12 +53,12 @@ public class Arrow : Interactable
     {
         GameObject other = collision.gameObject;
         //checks if collided with player
-        if (other.CompareTag("edge"))
+        if (other.CompareTag("Edge"))
         {
             PlayerInteraction();
         }
         //checks if collided with end of track and destroys gameobject if true
-        else if (other.CompareTag("end"))
+        else if (other.CompareTag("End"))
         {
             endOfTrack();
         }

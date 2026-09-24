@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1392388974185792610}
   - component: {fileID: 996273983303344048}
   - component: {fileID: 5478326612165103665}
+  - component: {fileID: 5491575368504650215}
   m_Layer: 0
   m_Name: GoodColliderLate
   m_TagString: Untagged
@@ -138,6 +139,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5491575368504650215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117501335848182400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e52d305de775d54c98732695e8dc37f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderGoodLate
+  inTrigger: 0
 --- !u!1 &3789688145383333169
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +163,7 @@ GameObject:
   - component: {fileID: 3806960692110625188}
   - component: {fileID: 5103986817001218441}
   - component: {fileID: 5854489315472837801}
+  - component: {fileID: 7024926941871493125}
   m_Layer: 0
   m_Name: BadColliderLate
   m_TagString: Untagged
@@ -276,6 +291,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7024926941871493125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789688145383333169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9806f8de4151eba4aa5b34bc5cca6f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderBadLate
+  inTrigger: 0
 --- !u!1 &6208504871382828137
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +315,7 @@ GameObject:
   - component: {fileID: 1615460960186070209}
   - component: {fileID: 3928204055168024435}
   - component: {fileID: 3347311180653579428}
+  - component: {fileID: 5560332376728325023}
   m_Layer: 0
   m_Name: PerfectCollider
   m_TagString: Untagged
@@ -414,6 +443,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5560332376728325023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6208504871382828137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2318baf77779164b8af8ddefcb8fd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderPerfect
+  inTrigger: 0
 --- !u!1 &6465602277502682193
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +468,7 @@ GameObject:
   - component: {fileID: 3167655080476278560}
   - component: {fileID: 2594744312655976704}
   - component: {fileID: 7714402849437033530}
+  - component: {fileID: 3690943858244849136}
   m_Layer: 0
   m_Name: arrow
   m_TagString: Untagged
@@ -585,6 +628,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 6.15}
   m_EdgeRadius: 0
+--- !u!50 &3690943858244849136
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465602277502682193}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &6982364072071452801
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +666,7 @@ GameObject:
   - component: {fileID: 5404962228002897411}
   - component: {fileID: 3065035366362735725}
   - component: {fileID: 8471410771886945185}
+  - component: {fileID: 4088714305487919736}
   m_Layer: 0
   m_Name: BadColliderEarly
   m_TagString: Untagged
@@ -723,6 +794,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4088714305487919736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6982364072071452801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c7b4caaeea8d94ca98dcdf11c28912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderBadEarly
+  inTrigger: 0
 --- !u!1 &7638455086888312103
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +818,7 @@ GameObject:
   - component: {fileID: 2121182355620134242}
   - component: {fileID: 5260701413436555762}
   - component: {fileID: 5432985858451429561}
+  - component: {fileID: 5317354385195304703}
   m_Layer: 0
   m_Name: GoodColliderEarly
   m_TagString: Untagged
@@ -861,3 +946,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5317354385195304703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638455086888312103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4992b93af8730e14f9a92313e49a9b94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderGoodEarly
+  inTrigger: 0

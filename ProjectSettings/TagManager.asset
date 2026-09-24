@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Edge
+  - End
   layers:
   - Default
   - TransparentFX
