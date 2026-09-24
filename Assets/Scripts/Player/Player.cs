@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
     
     [Header("Player Components")]
     [SerializeField] private Health playerHealth;
-    [SerializeField] private StateMachine playerStateMachine;
     [SerializeField] private InputReader playerInput;
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private StateMachine playerStateMachine;
 
     [Header("Movement Variables")]
     public bool canBeHit;
@@ -36,6 +37,31 @@ public class Player : MonoBehaviour
     public PlayerState GetState()
     {
         return currentState;
+    }
+
+    public void SetAnimation(String animationName)
+    {
+        playerAnimator.Play(animationName);
+    }
+
+    public void PlayUp()
+    {
+        SetAnimation("PlayUp");
+    }
+
+    public void PlayLeft()
+    {
+        SetAnimation("PlayLeft");
+    }
+
+    public void PlayRight()
+    {
+        SetAnimation("PlayRight");
+    }
+
+    public void PlayDown()
+    {
+        SetAnimation("PlayDown");
     }
 
     #region Movement Functions

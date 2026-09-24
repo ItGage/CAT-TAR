@@ -12,6 +12,9 @@ public class PlayerHitState : PlayerBaseState
 
         // Set Player State
         player.SetState(PlayerState.hit);
+
+        // Set Animation State
+        player.SetAnimation("Hit");
     }
 
     public override void Tick()

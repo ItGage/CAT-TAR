@@ -11,13 +11,21 @@ public class PlayerMoveState : PlayerBaseState
         // Set Player State
         player.SetState(PlayerState.baseState);
 
+        // Set Animation State
+        player.SetAnimation("Idle");
+
         // Subscribe Listeners
         stateMachine.input.JumpPerformed += stateMachine.SwitchToJumpState;
         stateMachine.input.ParryPerformed += stateMachine.SwitchToParryState;
 
         stateMachine.input.MoveLeftPerformed += player.MovePlayerLeft;
         stateMachine.input.MoveRightPerformed += player.MovePlayerRight;
-       
+
+        stateMachine.input.UpPerformed += player.PlayUp;
+        stateMachine.input.LeftPerformed += player.PlayLeft;
+        stateMachine.input.RightPerformed += player.PlayRight;
+        stateMachine.input.DownPerformed += player.PlayDown;
+
     }
 
     public override void Tick()
@@ -35,5 +43,10 @@ public class PlayerMoveState : PlayerBaseState
 
         stateMachine.input.MoveLeftPerformed -= player.MovePlayerLeft;
         stateMachine.input.MoveRightPerformed -= player.MovePlayerRight;
+
+        stateMachine.input.UpPerformed -= player.PlayUp;
+        stateMachine.input.LeftPerformed -= player.PlayLeft;
+        stateMachine.input.RightPerformed -= player.PlayRight;
+        stateMachine.input.DownPerformed -= player.PlayDown;
     }
 }

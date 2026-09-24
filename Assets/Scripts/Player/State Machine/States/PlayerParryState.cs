@@ -13,6 +13,9 @@ public class PlayerParryState : PlayerBaseState
         // Set Player State
         player.SetState(PlayerState.parrying);
 
+        // Set Animation State
+        player.SetAnimation("Parry");
+
         // Enter Logic
         parryTimer = 0f;
         player.MovePlayerDown();
