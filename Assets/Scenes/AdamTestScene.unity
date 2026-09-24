@@ -1220,8 +1220,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
+      propertyPath: songChart
+      value: 
+      objectReference: {fileID: 11400000, guid: bd75675e302d43a418602b95b681c868, type: 2}
+    - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: leadInSixteenths
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'
