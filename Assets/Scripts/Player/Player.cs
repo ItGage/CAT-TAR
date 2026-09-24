@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,21 +14,32 @@ public class Player : MonoBehaviour
     [SerializeField] private InputReader playerInput;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private StateMachine playerStateMachine;
+    [SerializeField] private GameObject playerSprite;
+    [SerializeField] private GameObject playerCollider;
 
     [Header("Movement Variables")]
     public bool canBeHit;
     [Space(5)]
     public float moveDistance;
-    public float rightMaxDistance;
-    public float leftMaxDistance;
+    public float moveLerpTime;
     [Space(5)]
-    public float jumpLength;
+    public float jumpDistance;
     public float jumpTime;
     [Space(5)]
     public float parryTime;
 
-    private float playerX;
-    private float playerY;
+    // Private References
+    private Vector2 playerStartingPos, desiredPosition;
+    private float leftBounds, rightBounds;
+    private Vector2 playerPos => playerSprite.transform.position;
+
+    private void Start()
+    {
+        playerStartingPos = transform.position;
+
+        leftBounds = (playerStartingPos.x - (moveDistance * 2f)) - 1f;
+        rightBounds = (playerStartingPos.x + (moveDistance * 2f)) + 1f;
+    }
 
     public void SetState(PlayerState state)
     {
@@ -42,6 +54,11 @@ public class Player : MonoBehaviour
     public void SetAnimation(String animationName)
     {
         playerAnimator.Play(animationName);
+    }
+
+    public void SetInvincibility(bool hit)
+    {
+        canBeHit = hit;
     }
 
     public void PlayUp()
@@ -66,42 +83,64 @@ public class Player : MonoBehaviour
 
     #region Movement Functions
 
-    public void SetInvincibility(bool hit)
+    public void MovePlayerUp()
     {
-        canBeHit = hit;
+        desiredPosition = new Vector2(playerPos.x, playerPos.y + jumpDistance);
+
+        StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
     }
-    
+
     public void MovePlayerLeft()
     {
+        desiredPosition = new Vector2(playerPos.x - moveDistance, playerPos.y);
 
-        playerX = transform.position.x - moveDistance;
-
-        if (playerX > leftMaxDistance)
+        if (desiredPosition.x > leftBounds)
         {
-            transform.position = new Vector2(playerX, transform.position.y);
+            MoveCollider(desiredPosition);
+            StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
         }
     }
 
     public void MovePlayerRight()
     {
-        playerX = transform.position.x + moveDistance;
+        desiredPosition = new Vector2(playerPos.x + moveDistance, playerPos.y);
 
-        if (playerX < rightMaxDistance)
+        if (desiredPosition.x < rightBounds)
         {
-            transform.position = new Vector2(playerX, transform.position.y);
+            MoveCollider(desiredPosition);
+            StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
         }
-    }
-
-    public void MovePlayerUp() 
-    {
-        playerY = transform.position.y + jumpLength;
-        transform.position = new Vector2(transform.position.x, playerY);
     }
 
     public void MovePlayerDown()
     {
-        playerY = transform.position.y - jumpLength;
-        transform.position = new Vector2(transform.position.x, playerY);
+        desiredPosition = new Vector2(playerPos.x, playerPos.y - jumpDistance);
+
+        StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+    }
+
+    public void MoveCollider(Vector2 pos)
+    {
+        playerCollider.transform.position = pos;
+    }
+
+    IEnumerator LerpSpritePosition(Vector2 startPos, Vector2 endPos, float timeLimit)
+    {
+        float elapsedTime = 0f;
+
+        while(elapsedTime < timeLimit)
+        {
+            float t = elapsedTime / timeLimit;
+
+            playerSprite.transform.position = Vector3.Lerp(startPos, endPos, t);
+
+            elapsedTime += Time.deltaTime;
+            //elpasedTime += AudioSource.dspTime;
+
+            yield return null;
+        }
+
+        playerSprite.transform.position = endPos;
     }
 
     #endregion
