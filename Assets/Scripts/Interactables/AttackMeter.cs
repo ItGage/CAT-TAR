@@ -21,7 +21,14 @@ public class AttackMeter : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private Slider slider;
 
-    private float percent;
+    private float threshold;
+    private float fillPercent;
+
+    private void Start()
+    {
+        fillPercent = 0f;
+        threshold = targetScore / maxScore;
+    }
 
     public void BadHit()
     {
@@ -50,10 +57,12 @@ public class AttackMeter : MonoBehaviour
         {
             currentScore = maxScore;
         }
+
+        UpdateSlider();
     }
 
     private void UpdateSlider()
     {
-
+        slider.value = currentScore / maxScore;
     }
 }
