@@ -27,6 +27,9 @@ public class ParryStar : Interactable
             {
                 parried = true;
                 if (isSpecial) hp.PlusParryCount();
+                //play fx here
+
+                Destroy(gameObject, FXTimer);
             }
         }
     }

@@ -129,6 +129,7 @@ public class Arrow : Interactable
     }
     public void Correct()
     {
+        Debug.Log("Correct arrow hit");
         //adds to the attack meter (number of correct attacks)
         if (badEarly.GetInTrigger())
         {
@@ -162,6 +163,7 @@ public class Arrow : Interactable
     }
     public void Incorrect()
     {
+        Debug.Log("Incorrect arrow hit");
         //change sprite to faded sprite
         player.RegisterHit();
 
