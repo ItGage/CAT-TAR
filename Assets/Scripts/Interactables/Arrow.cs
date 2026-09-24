@@ -5,6 +5,7 @@ public class Arrow : Interactable
     public ArrowCollider badEarly, badLate, goodEarly, goodLate, perfect;
 
     private bool canAttack = false;
+    private InputReader playerInput;
     public enum Direction
     {
         Left,
@@ -15,7 +16,7 @@ public class Arrow : Interactable
 
 
     //change to player ref for attackMeter
-    public AttackMeter attackMeter;
+    private AttackMeter attackMeter;
 
     [Header("Direction")]
     public Direction dir;
@@ -39,24 +40,94 @@ public class Arrow : Interactable
                 sr.sprite = spriteArray[3];
                 break;
         }
+        attackMeter = player.GetAttackMeter();
+
+        playerInput = player.GetInput();
+        playerInput.LeftPerformed += LeftPress;
+        playerInput.UpPerformed += UpPress;
+        playerInput.RightPerformed += RightPress;
+        playerInput.DownPerformed += DownPress;
     }
 
-    private void Update()
+    public override void OnTriggerEnter2D(Collider2D collision)
     {
-        //Only runs when the player is inside the collider
-        if(canAttack)
+        GameObject other = collision.gameObject;
+        //checks if collided with player
+        if (other.CompareTag("edge"))
         {
-            
-            //if player enters the correct key call correct function
-            //else if player enters incorrect key call incorect function 
+            PlayerInteraction();
+        }
+        //checks if collided with end of track and destroys gameobject if true
+        else if (other.CompareTag("end"))
+        {
+            endOfTrack();
+        }
+    }
+
+    private void LeftPress()
+    {
+        if (canAttack)
+        {
+            if (dir == Direction.Left)
+            {
+                Correct();
+            }
+            else
+            {
+                Incorrect();
+            }
+        }
+    }
+
+    private void UpPress()
+    {
+        if (canAttack)
+        {
+            if (dir == Direction.Up)
+            {
+                Correct();
+            }
+            else
+            {
+                Incorrect();
+            }
+        }
+    }
+    private void RightPress()
+    {
+        if (canAttack)
+        {
+            if (dir == Direction.Right)
+            {
+                Correct();
+            }
+            else
+            {
+                Incorrect();
+            }
+        }
+    }
+
+    private void DownPress()
+    {
+        if (canAttack)
+        {
+            if (dir == Direction.Down)
+            {
+                Correct();
+            }
+            else
+            {
+                Incorrect();
+            }
         }
     }
 
     public override void PlayerInteraction()
     {
-        canAttack = false;
+        canAttack = true;
     }
-    public void correct()
+    public void Correct()
     {
         //adds to the attack meter (number of correct attacks)
         if (badEarly.GetInTrigger())
@@ -83,14 +154,22 @@ public class Arrow : Interactable
         //play VFX and SFX for correct note
 
         //destory the object after FX are played
+        playerInput.LeftPerformed -= LeftPress;
+        playerInput.UpPerformed -= UpPress;
+        playerInput.RightPerformed -= RightPress;
+        playerInput.DownPerformed -= DownPress;
         Destroy(gameObject, FXTimer);
     }
-    public void incorrect()
+    public void Incorrect()
     {
         //change sprite to faded sprite
         player.RegisterHit();
 
         //disable collider so the player can't make another input
+        playerInput.LeftPerformed -= LeftPress;
+        playerInput.UpPerformed -= UpPress;
+        playerInput.RightPerformed -= RightPress;
+        playerInput.DownPerformed -= DownPress;
         gameObject.GetComponent<BoxCollider2D>().enabled = false; ;
     }
     private void OnTriggerExit2D(Collider2D collision)
