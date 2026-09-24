@@ -46,26 +46,7 @@ public class Arrow : Interactable
         //Only runs when the player is inside the collider
         if(canAttack)
         {
-            if (badEarly.GetInTrigger())
-            {
-
-            }
-            else if (goodEarly.GetInTrigger())
-            {
-
-            }
-            else if (perfect.GetInTrigger())
-            {
-
-            }
-            else if (goodLate.GetInTrigger())
-            {
-
-            }
-            else if (badLate.GetInTrigger())
-            {
-
-            }
+            
             //if player enters the correct key call correct function
             //else if player enters incorrect key call incorect function 
         }
@@ -78,10 +59,26 @@ public class Arrow : Interactable
     public void correct()
     {
         //adds to the attack meter (number of correct attacks)
-
-        //attackMeter.BadHit();
-        //attackMeter.GoodHit();
-        //attackMeter.PerfectHit();
+        if (badEarly.GetInTrigger())
+        {
+            attackMeter.BadHit();
+        }
+        else if (goodEarly.GetInTrigger())
+        {
+            attackMeter.GoodHit();
+        }
+        else if (perfect.GetInTrigger())
+        {
+            attackMeter.PerfectHit();
+        }
+        else if (goodLate.GetInTrigger())
+        {
+            attackMeter.GoodHit();
+        }
+        else if (badLate.GetInTrigger())
+        {
+            attackMeter.BadHit();
+        }
 
         //play VFX and SFX for correct note
 
