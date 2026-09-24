@@ -11,8 +11,11 @@ public class Arrow : Interactable
         Down
     }
 
+    public AttackMeter attackMeter;
+
     [Header("Direction")]
     public Direction dir;
+
     public override void Awake()
     {
         base.Awake();
@@ -52,6 +55,10 @@ public class Arrow : Interactable
     {
         //adds to the attack meter (number of correct attacks)
 
+        //attackMeter.BadHit();
+        //attackMeter.GoodHit();
+        //attackMeter.PerfectHit();
+
         //play VFX and SFX for correct note
 
         //destory the object after FX are played
@@ -60,6 +67,7 @@ public class Arrow : Interactable
     public void incorrect()
     {
         //change sprite to faded sprite
+        player.RegisterHit();
 
         //disable collider so the player can't make another input
         gameObject.GetComponent<BoxCollider2D>().enabled = false; ;

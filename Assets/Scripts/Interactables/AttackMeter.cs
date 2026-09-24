@@ -16,4 +16,19 @@ public class AttackMeter : MonoBehaviour
     {
         
     }
+
+    public void BadHit()
+    {
+
+    }
+
+    public void GoodHit()
+    {
+
+    }
+
+    public void PerfectHit()
+    {
+
+    }
 }

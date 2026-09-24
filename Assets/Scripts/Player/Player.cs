@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Health playerHealth;
     [SerializeField] private InputReader playerInput;
     [SerializeField] private Animator playerAnimator;
-    [SerializeField] private StateMachine playerStateMachine;
+    [SerializeField] private PlayerStateMachine playerStateMachine;
     [SerializeField] private GameObject playerSprite;
     [SerializeField] private GameObject playerCollider;
 
@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     public float jumpTime;
     [Space(5)]
     public float parryTime;
+    [Space(5)]
+    public float hitTime;
 
     // Private References
     private Vector2 playerStartingPos, desiredPosition;
@@ -61,6 +63,13 @@ public class Player : MonoBehaviour
         canBeHit = hit;
     }
 
+    public void RegisterHit()
+    {
+        playerStateMachine.SwitchToHitState();
+    }
+
+    #region "Playing" Functions
+
     public void PlayUp()
     {
         SetAnimation("PlayUp");
@@ -80,6 +89,8 @@ public class Player : MonoBehaviour
     {
         SetAnimation("PlayDown");
     }
+
+    #endregion
 
     #region Movement Functions
 
