@@ -20,7 +20,7 @@ public class SceneLoader : MonoBehaviour
     }
 
 
-    public void AsyncLevelLoad(string lvlName)
+    public void AsyncLoadLevel(string lvlName)
     {
         sceneName = lvlName;
 

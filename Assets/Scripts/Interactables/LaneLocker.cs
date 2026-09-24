@@ -12,6 +12,8 @@ public class LaneLocker : Interactable
     [Tooltip("The amount of time the Fx need to play")]
     [SerializeField] private float fxTime;
 
+
+
     private float cTimer=0, aTimer=0;
     private BoxCollider2D col;
     private bool colActive = false;
@@ -19,6 +21,7 @@ public class LaneLocker : Interactable
     public override void Awake()
     {
         base.Awake();
+        isMoveable = false;
         col = GetComponent<BoxCollider2D>();
         col.enabled = false;
         fadeIn();

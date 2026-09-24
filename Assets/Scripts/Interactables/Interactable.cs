@@ -10,6 +10,7 @@ public abstract class Interactable : MonoBehaviour
     public SpriteRenderer sr;
     [Tooltip("The amount of time needed to play the FX before destroying the interactable"), Min(0)]
     public float FXTimer;
+    public bool isMoveable=true;
 
     protected Health hp;
 
