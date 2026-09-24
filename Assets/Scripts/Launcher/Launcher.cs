@@ -39,6 +39,7 @@ public class Launcher : MonoBehaviour
                     Sixteenth slot = currentMeasure.lanes[laneIndex].sixteenths[sixteenthIndex];
 
                     //interactable testing
+                    /*
                     Debug.Log
                     (
                         "Checking lane " + laneIndex +
@@ -47,7 +48,7 @@ public class Launcher : MonoBehaviour
                         ", interactable = " +
                         (slot.interactable == null ? "NULL" : slot.interactable.name)
                     );
-
+                    */
                     //if there is an interactable on this slot, spawn it
                     if (slot.interactable != null)
                     {
@@ -58,11 +59,13 @@ public class Launcher : MonoBehaviour
                             spawnPoints[laneIndex].rotation
                         );
 
+                        /*
                         Debug.Log
                         (
                             "Spawned " + spawnedObject.name +
                             " in lane " + laneIndex
                         );
+                        */
 
                         if (spawnedObject.isMoveable)
                         {
@@ -79,7 +82,7 @@ public class Launcher : MonoBehaviour
                         }
                     }
                 }
-
+                /*
                 Debug.Log(Conductor.instance.totalSixteenth);
                 Debug.Log("Ready to launch sixteenth: " + nextSixteenthToLaunch);
                 Debug.Log
@@ -88,7 +91,7 @@ public class Launcher : MonoBehaviour
                     " Measure: " + measureIndex +
                     " Sixteenth: " + sixteenthIndex
                 );
-
+                */
                 nextSixteenthToLaunch++;
             }
         }
