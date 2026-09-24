@@ -46,7 +46,8 @@ public abstract class Interactable : MonoBehaviour
     //destroy interactable at the end of the lane
     public virtual void endOfTrack()
     {
-        Destroy(gameObject);
+        //play fx here
+        Destroy(gameObject, FXTimer);
     }
 
     public abstract void PlayerInteraction();
