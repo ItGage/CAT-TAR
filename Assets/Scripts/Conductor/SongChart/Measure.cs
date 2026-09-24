@@ -7,7 +7,7 @@ public class Measure
 
     public Measure()
     {
-        lanes = new Lane[4];
+        lanes = new Lane[5];
 
         for (int i = 0; i < lanes.Length; i++)
         {

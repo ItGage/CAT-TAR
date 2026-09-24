@@ -10,7 +10,7 @@ public class Launcher : MonoBehaviour
 
     public int leadInSixteenths = 8;
    
-    private int nextSixteenthToLaunch = 8;
+    private int nextSixteenthToLaunch = 0;
 
     private List<LaunchedObject> activeObjects = new();
 
@@ -95,9 +95,15 @@ public class Launcher : MonoBehaviour
 
         //----------------------------------------Movement Section------------------------------------//
 
-        for (int i = 0; i < activeObjects.Count; i++)
+        for (int i = activeObjects.Count - 1; i >= 0; i--)
         {
             LaunchedObject launchedObject = activeObjects[i];
+
+            if (launchedObject.interactable == null)
+            {
+                activeObjects.RemoveAt(i);
+                continue;
+            }
 
             float progress =
                 (Conductor.instance.songPositionInSixteenths - launchedObject.spawnSixteenth) /
