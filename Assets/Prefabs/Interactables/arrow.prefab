@@ -533,6 +533,7 @@ MonoBehaviour:
   sr: {fileID: 3167655080476278560}
   FXTimer: 0
   isMoveable: 1
+  attackMeter: {fileID: 0}
   dir: 0
 --- !u!61 &7714402849437033530
 BoxCollider2D:

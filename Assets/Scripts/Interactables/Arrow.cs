@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Arrow : Interactable
 {
+    public ArrowCollider badEarly, badLate, goodEarly, goodLate, perfect;
+
     private bool canAttack = false;
     public enum Direction
     {
@@ -11,6 +13,8 @@ public class Arrow : Interactable
         Down
     }
 
+
+    //change to player ref for attackMeter
     public AttackMeter attackMeter;
 
     [Header("Direction")]
@@ -42,6 +46,26 @@ public class Arrow : Interactable
         //Only runs when the player is inside the collider
         if(canAttack)
         {
+            if (badEarly.GetInTrigger())
+            {
+
+            }
+            else if (goodEarly.GetInTrigger())
+            {
+
+            }
+            else if (perfect.GetInTrigger())
+            {
+
+            }
+            else if (goodLate.GetInTrigger())
+            {
+
+            }
+            else if (badLate.GetInTrigger())
+            {
+
+            }
             //if player enters the correct key call correct function
             //else if player enters incorrect key call incorect function 
         }
