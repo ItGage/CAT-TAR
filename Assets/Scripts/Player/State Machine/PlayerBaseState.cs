@@ -6,6 +6,7 @@ public abstract class PlayerBaseState : State
     // References
     protected Player player;
     protected InputReader input;
+    protected Animator animator;
     
     protected readonly PlayerStateMachine stateMachine;
 

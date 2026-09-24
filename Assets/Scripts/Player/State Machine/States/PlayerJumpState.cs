@@ -17,6 +17,9 @@ public class PlayerJumpState : PlayerBaseState
         // Set Player State
         player.SetState(PlayerState.jumping);
 
+        // Set Animation State
+        player.SetAnimation("Jump");
+
         // Subscribe Listeners
         input.MoveLeftPerformed += player.MovePlayerLeft;
         input.MoveRightPerformed += player.MovePlayerRight;
