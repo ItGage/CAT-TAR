@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.7, y: 46.7, z: 0}
-  m_LocalScale: {x: 2, y: 5.073835, z: 0.24169475}
+  m_LocalScale: {x: 6, y: 15.221504, z: 0.72508425}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -155,6 +155,7 @@ MonoBehaviour:
   spriteArray: []
   sr: {fileID: 3700355684631834637}
   FXTimer: 0
+  isMoveable: 1
   countdownTime: 0.21
   activeTime: 0.75
   fxTime: 1.96
