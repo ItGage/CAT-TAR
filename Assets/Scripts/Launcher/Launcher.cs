@@ -103,7 +103,7 @@ public class Launcher : MonoBehaviour
                 (Conductor.instance.songPositionInSixteenths - launchedObject.spawnSixteenth) /
                 (launchedObject.targetSixteenth - launchedObject.spawnSixteenth);
 
-            Vector2 newPosition = Vector2.Lerp
+            Vector2 newPosition = Vector2.LerpUnclamped
             (
                 launchedObject.startPosition,
                 launchedObject.targetPosition,
