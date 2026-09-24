@@ -576,11 +576,11 @@ MonoBehaviour:
   sr: {fileID: 3167655080476278560}
   FXTimer: 0
   isMoveable: 1
-  badEarly: {fileID: 0}
-  badLate: {fileID: 0}
-  goodEarly: {fileID: 0}
-  goodLate: {fileID: 0}
-  perfect: {fileID: 0}
+  badEarly: {fileID: 4088714305487919736}
+  badLate: {fileID: 7024926941871493125}
+  goodEarly: {fileID: 5317354385195304703}
+  goodLate: {fileID: 5491575368504650215}
+  perfect: {fileID: 5560332376728325023}
   dir: 0
 --- !u!61 &7714402849437033530
 BoxCollider2D:

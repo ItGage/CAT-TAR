@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerStateMachine playerStateMachine;
     [SerializeField] private GameObject playerSprite;
     [SerializeField] private GameObject playerCollider;
+    [SerializeField] private GameObject edgeCollider;
     [SerializeField] private AttackMeter attackMeter;
 
     [Header("Movement Variables")]
@@ -162,6 +163,7 @@ public class Player : MonoBehaviour
     public void MoveCollider(Vector2 pos)
     {
         playerCollider.transform.position = pos;
+        edgeCollider.transform.position = pos;
     }
 
     IEnumerator LerpSpritePosition(Vector2 startPos, Vector2 endPos, float timeLimit)
