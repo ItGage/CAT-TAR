@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e86c48dda4184d142ba6d869992725a4
+guid: f1b54fc6683ea9848b7f64188a24e55b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5485883195716947468
-    second: CatManRight2_0
+      213: 3389091324547420977
+    second: CatManLeft2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,16 +109,29 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CatManRight2_0
+      name: CatManLeft2_0
       rect:
         serializedVersion: 2
-        x: 349
+        x: 326
         y: 129
-        width: 464
+        width: 487
         height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f1b1088c4a3ed3b0800000000000000
-      internalID: -5485883195716947468
+      spriteID: 133d10f7a98780f20800000000000000
+      internalID: 3389091324547420977
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CatManRight2_0: -5485883195716947468
+      CatManLeft2_0: 3389091324547420977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
