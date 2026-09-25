@@ -21,7 +21,7 @@ public class PlayerParryState : PlayerBaseState
 
     public override void Tick()
     {
-        if (parryTimer < player.jumpTime)
+        if (parryTimer < player.parryTime)
         {
             //parryTimer += (float)AudioSettings.dspTime;
             parryTimer += Time.deltaTime;
