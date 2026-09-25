@@ -16,19 +16,27 @@ public abstract class Interactable : MonoBehaviour
     protected bool hasDoneDamage = false;
 
     [SerializeField] protected AudioSource audioPlayer;
+    
+    protected LevelManager manager;
 
-    protected GameObject playerObject;
+    protected GameObject playerObject, managerObject;
 
     protected Player player;
 
     public virtual void Awake()
     {
-        //finds player gameobject
+        //finds player and hp ref in scene
         playerObject = GameObject.Find("Player");
         if (playerObject!=null)
         {
             player = playerObject.GetComponent<Player>();
             hp = player.GetHealth();
+        }
+        //finds the level manager ref
+        managerObject = GameObject.Find("LevelManager");
+        if (managerObject!=null)
+        {
+            manager = managerObject.GetComponent<LevelManager>();
         }
     }
 

@@ -5,6 +5,8 @@ public class Arrow : Interactable
     public ArrowCollider badEarly, badLate, goodEarly, goodLate, perfect;
 
     [SerializeField] private AudioClip perfectSFX, goodSFX, badSFX, wrongSFX;
+    
+    private ScoreKeeper scoreKeep;
 
     private bool canAttack = false;
     private InputReader playerInput;
@@ -26,8 +28,8 @@ public class Arrow : Interactable
     public override void Awake()
     {
         base.Awake();
-        
-        switch(dir)
+
+        switch (dir)
         {
             case Direction.Left:
                 sr.sprite = spriteArray[0];
@@ -42,6 +44,7 @@ public class Arrow : Interactable
                 sr.sprite = spriteArray[3];
                 break;
         }
+
         attackMeter = player.GetAttackMeter();
 
         playerInput = player.GetInput();
@@ -49,6 +52,8 @@ public class Arrow : Interactable
         playerInput.UpPerformed += UpPress;
         playerInput.RightPerformed += RightPress;
         playerInput.DownPerformed += DownPress;
+
+        if (manager != null) scoreKeep = manager.scoreKeep;
     }
 
     public override void OnTriggerEnter2D(Collider2D collision)
@@ -136,26 +141,31 @@ public class Arrow : Interactable
         //Still need to add to score keeper
         if (badEarly.GetInTrigger())
         {
+            scoreKeep.AddBadHit();
             audioPlayer.PlayOneShot(badSFX);
             attackMeter.BadHit();
         }
         else if (goodEarly.GetInTrigger())
         {
+            scoreKeep.AddGoodHit();
             audioPlayer.PlayOneShot(goodSFX);
             attackMeter.GoodHit();
         }
         else if (perfect.GetInTrigger())
         {
+            scoreKeep.AddPerfectHit();
             audioPlayer.PlayOneShot(perfectSFX);
             attackMeter.PerfectHit();
         }
         else if (goodLate.GetInTrigger())
         {
+            scoreKeep.AddGoodHit();
             audioPlayer.PlayOneShot(goodSFX);
             attackMeter.GoodHit();
         }
         else if (badLate.GetInTrigger())
         {
+            scoreKeep.AddBadHit();
             audioPlayer.PlayOneShot(badSFX);
             attackMeter.BadHit();
         }
