@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     [Tooltip("Current number of special parries")]
     [SerializeField] private int sParryCount=0;
     [SerializeField] private HpUI hpUI;
+    [SerializeField] private AudioSource audioPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,6 +22,8 @@ public class Health : MonoBehaviour
     {
         currentHp -= dmg;
         hpUI.SetHP(currentHp);
+
+        audioPlayer.Play();
 
         if (currentHp<=0)
         {
