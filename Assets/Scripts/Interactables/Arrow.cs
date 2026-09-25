@@ -141,13 +141,13 @@ public class Arrow : Interactable
         //Still need to add to score keeper
         if (badEarly.GetInTrigger())
         {
-            scoreKeep.AddBadHit();
+            scoreKeep.AddBadHit("Early");
             audioPlayer.PlayOneShot(badSFX);
             attackMeter.BadHit();
         }
         else if (goodEarly.GetInTrigger())
         {
-            scoreKeep.AddGoodHit();
+            scoreKeep.AddGoodHit("Early");
             audioPlayer.PlayOneShot(goodSFX);
             attackMeter.GoodHit();
         }
@@ -159,13 +159,13 @@ public class Arrow : Interactable
         }
         else if (goodLate.GetInTrigger())
         {
-            scoreKeep.AddGoodHit();
+            scoreKeep.AddGoodHit("Late");
             audioPlayer.PlayOneShot(goodSFX);
             attackMeter.GoodHit();
         }
         else if (badLate.GetInTrigger())
         {
-            scoreKeep.AddBadHit();
+            scoreKeep.AddBadHit("Late");
             audioPlayer.PlayOneShot(badSFX);
             attackMeter.BadHit();
         }

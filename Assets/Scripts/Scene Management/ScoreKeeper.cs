@@ -8,27 +8,27 @@ public class ScoreKeeper : MonoBehaviour
     public void AddPerfectHit()
     {
         perfectHits++;
-        UpdateUI("Perfect!");
+        UpdateUI("Perfect!", "");
     }
-    public void AddGoodHit()
+    public void AddGoodHit(string timing)
     {
         goodHits++;
-        UpdateUI("Good");
+        UpdateUI("Good", timing);
     }
-    public void AddBadHit()
+    public void AddBadHit(string timing)
     {
         badHits++;
-        UpdateUI("Bad.");
+        UpdateUI("Bad.", timing);
     }
     public void AddMissedHit()
     {
         missedHits++;
-        UpdateUI("");
+        UpdateUI("", "");
     }
 
-    public void UpdateUI(string hit)
+    public void UpdateUI(string hit, string timing)
     {
-        ui.UpdateUI(hit);
+        ui.UpdateUI(hit, timing);
     }
 
 }

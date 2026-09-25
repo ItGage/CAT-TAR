@@ -7,9 +7,10 @@ using Unity.VisualScripting;
 public class HitPerformedUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text hitPerformed;
-
-    public void UpdateUI(string hit)
+    [SerializeField] private TMP_Text timingPerformed;
+    public void UpdateUI(string hit, string timing)
     {
         hitPerformed.text = hit;
+        timingPerformed.text = timing;
     }
 }
