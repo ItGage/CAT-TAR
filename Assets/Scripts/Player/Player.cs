@@ -20,8 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AttackMeter attackMeter;
 
     [Header("Movement Variables")]
-    public bool canBeHit;
-    [Space(5)]
+    public bool isMoving;
     public float moveDistance;
     public float moveLerpTime;
     [Space(5)]
@@ -43,11 +42,6 @@ public class Player : MonoBehaviour
 
         leftBounds = (playerStartingPos.x - (moveDistance * 2f)) - 1f;
         rightBounds = (playerStartingPos.x + (moveDistance * 2f)) + 1f;
-    }
-
-    public void SetInvincibility(bool hit)
-    {
-        canBeHit = hit;
     }
 
     public void RegisterHit()
@@ -128,14 +122,17 @@ public class Player : MonoBehaviour
     {
         desiredPosition = new Vector2(playerPos.x, playerPos.y + jumpDistance);
 
-        StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+        if(!isMoving)
+        {
+            StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+        }
     }
 
     public void MovePlayerLeft()
     {
         desiredPosition = new Vector2(playerPos.x - moveDistance, playerPos.y);
 
-        if (desiredPosition.x > leftBounds)
+        if (desiredPosition.x > leftBounds && !isMoving)
         {
             MoveCollider(desiredPosition);
             StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
@@ -146,7 +143,7 @@ public class Player : MonoBehaviour
     {
         desiredPosition = new Vector2(playerPos.x + moveDistance, playerPos.y);
 
-        if (desiredPosition.x < rightBounds)
+        if (desiredPosition.x < rightBounds && !isMoving)
         {
             MoveCollider(desiredPosition);
             StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
@@ -157,7 +154,10 @@ public class Player : MonoBehaviour
     {
         desiredPosition = new Vector2(playerPos.x, playerPos.y - jumpDistance);
 
-        StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+        if(!isMoving)
+        {
+            StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+        }
     }
 
     public void MoveCollider(Vector2 pos)
@@ -169,6 +169,7 @@ public class Player : MonoBehaviour
     IEnumerator LerpSpritePosition(Vector2 startPos, Vector2 endPos, float timeLimit)
     {
         float elapsedTime = 0f;
+        isMoving = true;
 
         while(elapsedTime < timeLimit)
         {
@@ -183,6 +184,7 @@ public class Player : MonoBehaviour
         }
 
         playerSprite.transform.position = endPos;
+        isMoving = false;
     }
 
     #endregion

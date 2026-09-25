@@ -11,7 +11,6 @@ public class PlayerHitState : PlayerBaseState
         Debug.Log("Entering 'Hit State'");
 
         hitTimer = 0f;
-        player.SetInvincibility(true);
 
         // Set Player State
         player.SetState(PlayerState.hit);
@@ -36,7 +35,5 @@ public class PlayerHitState : PlayerBaseState
     public override void Exit()
     {
         Debug.Log("Exiting 'Hit State''");
-
-        player.SetInvincibility(false);
     }
 }
