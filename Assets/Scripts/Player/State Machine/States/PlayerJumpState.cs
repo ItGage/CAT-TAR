@@ -12,7 +12,6 @@ public class PlayerJumpState : PlayerBaseState
 
         jumpTimer = 0f;
         player.MovePlayerUp();
-        player.SetInvincibility(true);
 
         // Set Player State
         player.SetState(PlayerState.jumping);
@@ -43,7 +42,6 @@ public class PlayerJumpState : PlayerBaseState
         Debug.Log("Exiting 'Jump State'");
 
         player.MovePlayerDown();
-        player.SetInvincibility(false);
 
         // Unsubscribe Listeners
         input.MoveLeftPerformed -= player.MovePlayerLeft;

@@ -28,6 +28,8 @@ public class AttackMeter : MonoBehaviour
     {
         fillPercent = 0f;
         threshold = targetScore / maxScore;
+
+        UpdateSlider(0f);
     }
 
     public void BadHit()
@@ -58,11 +60,11 @@ public class AttackMeter : MonoBehaviour
             currentScore = maxScore;
         }
 
-        UpdateSlider();
+        UpdateSlider(currentScore / maxScore);
     }
 
-    private void UpdateSlider()
+    private void UpdateSlider(float score)
     {
-        slider.value = currentScore / maxScore;
+        slider.value = score;
     }
 }

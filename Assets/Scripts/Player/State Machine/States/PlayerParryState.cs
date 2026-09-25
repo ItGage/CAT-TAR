@@ -19,7 +19,6 @@ public class PlayerParryState : PlayerBaseState
         // Enter Logic
         parryTimer = 0f;
         player.MovePlayerDown();
-        player.SetInvincibility(true);
     }
 
     public override void Tick()
@@ -42,6 +41,5 @@ public class PlayerParryState : PlayerBaseState
 
         // Exit Logic
         player.MovePlayerUp();
-        player.SetInvincibility(false);
     }
 }
