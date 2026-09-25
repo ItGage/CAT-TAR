@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private PlayerStateMachine playerStateMachine;
     [SerializeField] private GameObject playerSprite;
-    [SerializeField] private GameObject playerCollider;
+    [SerializeField] private GameObject boxCollider;
     [SerializeField] private GameObject edgeCollider;
     [SerializeField] private AttackMeter attackMeter;
 
@@ -32,13 +32,14 @@ public class Player : MonoBehaviour
     public float hitTime;
 
     // Private References
-    private Vector2 playerStartingPos, desiredPosition;
+    private Vector2 playerStartingPos, desiredPositionPlayer, desiredPositionEdge;
     private float leftBounds, rightBounds, upBounds, downBounds;
     private Vector2 playerPos => playerSprite.transform.position;
+    private Vector2 edgePos => edgeCollider.transform.position;
 
     private void Start()
     {
-        playerStartingPos = transform.position;
+        playerStartingPos = playerSprite.transform.position;
 
         leftBounds = playerStartingPos.x - (moveDistance * 2f);
         rightBounds = playerStartingPos.x + (moveDistance * 2f);
@@ -130,49 +131,57 @@ public class Player : MonoBehaviour
 
     public void MovePlayerUp()
     {
-        desiredPosition = new Vector2(playerPos.x, playerPos.y + jumpDistance);
+        desiredPositionPlayer = new Vector2(playerPos.x, playerPos.y + jumpDistance);
 
-        if(desiredPosition.y <= upBounds && !isMoving)
+        if(desiredPositionPlayer.y <= upBounds && !isMoving)
         {
-            StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+            StartCoroutine(LerpSpritePosition(playerPos, desiredPositionPlayer, moveLerpTime));
         }
     }
 
     public void MovePlayerLeft()
     {
-        desiredPosition = new Vector2(playerPos.x - moveDistance, playerPos.y);
+        desiredPositionPlayer = new Vector2(playerPos.x - moveDistance, playerPos.y);
+        desiredPositionEdge = new Vector2(edgePos.x - moveDistance, edgePos.y);
 
-        if (desiredPosition.x >= leftBounds && !isMoving)
+        if (desiredPositionPlayer.x >= leftBounds && !isMoving)
         {
-            MoveCollider(desiredPosition);
-            StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+            MoveBoxCollider(desiredPositionPlayer);
+            MoveEdgeCollider(desiredPositionEdge);
+            StartCoroutine(LerpSpritePosition(playerPos, desiredPositionPlayer, moveLerpTime));
         }
     }
 
     public void MovePlayerRight()
     {
-        desiredPosition = new Vector2(playerPos.x + moveDistance, playerPos.y);
+        desiredPositionPlayer = new Vector2(playerPos.x + moveDistance, playerPos.y);
+        desiredPositionEdge = new Vector2(edgePos.x + moveDistance, edgePos.y);
 
-        if (desiredPosition.x <= rightBounds && !isMoving)
+        if (desiredPositionPlayer.x <= rightBounds && !isMoving)
         {
-            MoveCollider(desiredPosition);
-            StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+            MoveBoxCollider(desiredPositionPlayer);
+            MoveEdgeCollider(desiredPositionEdge);
+            StartCoroutine(LerpSpritePosition(playerPos, desiredPositionPlayer, moveLerpTime));
         }
     }
 
     public void MovePlayerDown()
     {
-        desiredPosition = new Vector2(playerPos.x, playerPos.y - jumpDistance);
+        desiredPositionPlayer = new Vector2(playerPos.x, playerPos.y - jumpDistance);
 
-        if(desiredPosition.y >= downBounds && !isMoving)
+        if(desiredPositionPlayer.y >= downBounds && !isMoving)
         {
-            StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
+            StartCoroutine(LerpSpritePosition(playerPos, desiredPositionPlayer, moveLerpTime));
         }
     }
 
-    public void MoveCollider(Vector2 pos)
+    public void MoveBoxCollider(Vector2 pos)
     {
-        playerCollider.transform.position = pos;
+        boxCollider.transform.position = pos;
+    }
+
+    public void MoveEdgeCollider(Vector2 pos)
+    {
         edgeCollider.transform.position = pos;
     }
 
