@@ -1357,6 +1357,10 @@ PrefabInstance:
       propertyPath: hpUI
       value: 
       objectReference: {fileID: 507449342}
+    - target: {fileID: 1014171988805933614, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
       propertyPath: attackMeter
       value: 

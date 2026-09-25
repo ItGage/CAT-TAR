@@ -15,6 +15,8 @@ public abstract class Interactable : MonoBehaviour
     protected Health hp;
     protected bool hasDoneDamage = false;
 
+    [SerializeField] protected AudioSource audioPlayer;
+
     protected GameObject playerObject;
 
     protected Player player;

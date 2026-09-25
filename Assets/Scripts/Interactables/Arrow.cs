@@ -4,6 +4,8 @@ public class Arrow : Interactable
 {
     public ArrowCollider badEarly, badLate, goodEarly, goodLate, perfect;
 
+    [SerializeField] private AudioClip perfectSFX, goodSFX, badSFX, wrongSFX;
+
     private bool canAttack = false;
     private InputReader playerInput;
     public enum Direction
@@ -134,22 +136,27 @@ public class Arrow : Interactable
         //Still need to add to score keeper
         if (badEarly.GetInTrigger())
         {
+            audioPlayer.PlayOneShot(badSFX);
             attackMeter.BadHit();
         }
         else if (goodEarly.GetInTrigger())
         {
+            audioPlayer.PlayOneShot(goodSFX);
             attackMeter.GoodHit();
         }
         else if (perfect.GetInTrigger())
         {
+            audioPlayer.PlayOneShot(perfectSFX);
             attackMeter.PerfectHit();
         }
         else if (goodLate.GetInTrigger())
         {
+            audioPlayer.PlayOneShot(goodSFX);
             attackMeter.GoodHit();
         }
         else if (badLate.GetInTrigger())
         {
+            audioPlayer.PlayOneShot(badSFX);
             attackMeter.BadHit();
         }
 
@@ -167,7 +174,7 @@ public class Arrow : Interactable
         Debug.Log("Incorrect arrow hit");
         //change sprite to faded sprite
         player.RegisterHit();
-
+        audioPlayer.PlayOneShot(wrongSFX);
         //disable collider so the player can't make another input
         playerInput.LeftPerformed -= LeftPress;
         playerInput.UpPerformed -= UpPress;
