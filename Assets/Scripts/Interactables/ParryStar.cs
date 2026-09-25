@@ -6,7 +6,6 @@ public class ParryStar : Interactable
     public bool isSpecial = false;
     private bool parried = false, canParry = false;
 
-
     public override void Awake()
     {
         base.Awake();
@@ -20,11 +19,12 @@ public class ParryStar : Interactable
     private void Update()
     {
         //checks if player is in the collider
-        if (canParry)
+        if (canParry && !parried)
         {
             //Checks if player parries
             if (player.GetState() == PlayerState.parrying)
             {
+                audioPlayer.Play();
                 parried = true;
                 if (isSpecial) hp.PlusParryCount();
                 //play fx here

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -9208328433403728831}
   - component: {fileID: -8689914935550421400}
   m_Layer: 0
-  m_Name: parryStar
+  m_Name: parrySpecialStar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3901428770384818766, guid: 03f04011202a235439f07aab33e6060e, type: 3}
+  m_Sprite: {fileID: 2305795230628510967, guid: daa9747e4a106004bb9a038a6ea8fd35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +133,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.37, y: 5.87}
+    oldSize: {x: 5.22, y: 5.71}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -161,8 +161,7 @@ MonoBehaviour:
   FXTimer: 0.5
   isMoveable: 1
   audioPlayer: {fileID: -8689914935550421400}
-  isSpecial: 0
-  parryClip: {fileID: 8300000, guid: 931b6f1174f9e214aab953f36d20c233, type: 3}
+  isSpecial: 1
 --- !u!50 &-9208328433403728831
 Rigidbody2D:
   serializedVersion: 5
