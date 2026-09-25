@@ -22,14 +22,12 @@ public class AttackMeter : MonoBehaviour
     [SerializeField] private Slider slider;
 
     private float threshold;
-    private float fillPercent;
 
     private void Start()
     {
-        fillPercent = 0f;
         threshold = targetScore / maxScore;
 
-        UpdateSlider(0f);
+        ResetMeter();
     }
 
     public void BadHit()
@@ -66,5 +64,10 @@ public class AttackMeter : MonoBehaviour
     private void UpdateSlider(float score)
     {
         slider.value = score;
+    }
+
+    public void ResetMeter()
+    {
+        UpdateSlider(0f);
     }
 }
