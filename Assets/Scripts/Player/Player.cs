@@ -46,6 +46,14 @@ public class Player : MonoBehaviour
         downBounds = playerStartingPos.y;
     }
 
+    private void Update()
+    {
+        if (playerPos.y != playerStartingPos.y && currentState != PlayerState.jumping)
+        {
+            MovePlayerDown();
+        }
+    }
+
     public void RegisterHit()
     {
         playerStateMachine.SwitchToHitState();
