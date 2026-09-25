@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Beam : Interactable
 {
-    private bool inTrigger = false, hasDealtDmg=false;
+    private bool inTrigger = false;
     public override void PlayerInteraction()
     {
         inTrigger = true; 
@@ -11,13 +11,12 @@ public class Beam : Interactable
     private void Update()
     {
         //Checks if player is in the beam collider and hasn't taken damage from it yet
-        if (inTrigger && !hasDealtDmg)
+        if (inTrigger)
         {
             //Checks if player is not jumping
             if(player.GetState() != PlayerState.jumping)
             {
-                hp.TakeDmg(damage);
-                hasDealtDmg = true;
+                dealDmg();
             }
         }
     }

@@ -42,8 +42,7 @@ public class ParryStar : Interactable
         GameObject other = collision.gameObject;
         if (other.CompareTag("Player"))
         {
-            hp.TakeDmg(damage);
+            dealDmg();
         }
-        Destroy(gameObject, FXTimer);
     }
 }

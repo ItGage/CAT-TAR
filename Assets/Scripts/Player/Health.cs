@@ -7,17 +7,20 @@ public class Health : MonoBehaviour
     [SerializeField] private int numParriesToHeal;
     [Tooltip("Current number of special parries")]
     [SerializeField] private int sParryCount=0;
+    [SerializeField] private HpUI hpUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHp = maxHp;
         sParryCount = 0;
+        hpUI.SetHP(currentHp);
     }
 
     public void TakeDmg(float dmg)
     {
         currentHp -= dmg;
+        hpUI.SetHP(currentHp);
 
         if (currentHp<=0)
         {

@@ -13,6 +13,7 @@ public abstract class Interactable : MonoBehaviour
     public bool isMoveable=true;
 
     protected Health hp;
+    protected bool hasDoneDamage = false;
 
     protected GameObject playerObject;
 
@@ -54,9 +55,12 @@ public abstract class Interactable : MonoBehaviour
 
     public virtual void dealDmg()
     {
-        /*
-         * player.takeDmg(damage);
-         */
+        if (!hasDoneDamage)
+        {
+            hasDoneDamage = true;
+            hp.TakeDmg(damage);
+            Destroy(gameObject, FXTimer);
+        }
     }
 
     /*if needed
