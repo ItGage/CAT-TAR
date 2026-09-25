@@ -5,7 +5,8 @@ public class Arrow : Interactable
     public ArrowCollider badEarly, badLate, goodEarly, goodLate, perfect;
 
     [SerializeField] private AudioClip perfectSFX, goodSFX, badSFX, wrongSFX;
-    
+    [SerializeField] private SpriteRenderer srGlow;
+
     private ScoreKeeper scoreKeep;
 
     private bool canAttack = false;
@@ -62,12 +63,24 @@ public class Arrow : Interactable
         //checks if collided with player
         if (other.CompareTag("Edge"))
         {
+            srGlow.enabled = true;
             PlayerInteraction();
         }
         //checks if collided with end of track and destroys gameobject if true
         else if (other.CompareTag("End"))
         {
             endOfTrack();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        GameObject other = collision.gameObject;
+        //checks if collided with player
+        if (other.CompareTag("Edge"))
+        {
+            srGlow.enabled = false;
+            canAttack = false;
         }
     }
 
@@ -191,9 +204,5 @@ public class Arrow : Interactable
         playerInput.RightPerformed -= RightPress;
         playerInput.DownPerformed -= DownPress;
         gameObject.GetComponent<BoxCollider2D>().enabled = false; ;
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        canAttack = false;
     }
 }
