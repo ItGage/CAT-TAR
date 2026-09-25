@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         sectionIndex = 0;
-        SetCurrentSection(0);
+        SetCurrentSection();
     }
 
     private void Update()
@@ -31,16 +31,8 @@ public class LevelManager : MonoBehaviour
         {
             currentMeasure = conductor.GetCurrentMeasure();
         }
-    }
 
-    private void SetCurrentSection(int index)
-    {
-        currentSection = sections[index];
-
-        if(index < sections.Length)
-        {
-            nextSection = sections[index++];
-        }
+        CheckSection();
     }
 
     public void CheckSection()
@@ -51,10 +43,23 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private void SetCurrentSection()
+    {
+        if(sectionIndex < sections.Length)
+        {
+            currentSection = sections[sectionIndex];
+        }
+
+        if (sectionIndex < sections.Length - 1)
+        {
+            nextSection = sections[sectionIndex + 1];
+        }
+    }
+
     private void NextSection()
     {
         sectionIndex++;
-        SetCurrentSection(sectionIndex);
+        SetCurrentSection();
 
         if(currentSection.sectionType == section.attack)
         {

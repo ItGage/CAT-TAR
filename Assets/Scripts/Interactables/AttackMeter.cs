@@ -66,8 +66,14 @@ public class AttackMeter : MonoBehaviour
         slider.value = score;
     }
 
+    public void ResetScore()
+    {
+        currentScore = 0;
+    }
+
     public void ResetMeter()
     {
+        ResetScore();
         UpdateSlider(0f);
     }
 }
