@@ -20,80 +20,84 @@ public class Launcher : MonoBehaviour
 
         //----------------------------------------Spawning Section------------------------------------//
 
-        if (Conductor.instance.songPositionInSixteenths >= launchAtSixteenth)
+        while(Conductor.instance.songPositionInSixteenths >= nextSixteenthToLaunch - leadInSixteenths)
         {
-
             int measureIndex = nextSixteenthToLaunch / 16;
             int sixteenthIndex = nextSixteenthToLaunch % 16;
 
             //keeps you from going past the end of song
-            if (measureIndex < songChart.measures.Count)
+            if (measureIndex >= songChart.measures.Count)
             {
-                //grabs current measure and stores locally
-                Measure currentMeasure = songChart.measures[measureIndex];
+                break;
+            }
 
-                //loops through each lane
-                for (int laneIndex = 0; laneIndex < currentMeasure.lanes.Length; laneIndex++)
-                {
-                    //grabs current sixteenth index and stores locally as "slot"
-                    Sixteenth slot = currentMeasure.lanes[laneIndex].sixteenths[sixteenthIndex];
+            //grabs current measure and stores locally
+            Measure currentMeasure = songChart.measures[measureIndex];
 
-                    //interactable testing
-                    /*
-                    Debug.Log
-                    (
-                        "Checking lane " + laneIndex +
-                        ", measure " + measureIndex +
-                        ", sixteenth " + sixteenthIndex +
-                        ", interactable = " +
-                        (slot.interactable == null ? "NULL" : slot.interactable.name)
-                    );
-                    */
-                    //if there is an interactable on this slot, spawn it
-                    if (slot.interactable != null)
-                    {
-                        Interactable spawnedObject = Instantiate
-                        (
-                            slot.interactable,
-                            spawnPoints[laneIndex].position,
-                            spawnPoints[laneIndex].rotation
-                        );
+            //loops through each lane
+            for (int laneIndex = 0; laneIndex < currentMeasure.lanes.Length; laneIndex++)
+            {
+                //grabs current sixteenth index and stores locally as "slot"
+                Sixteenth slot = currentMeasure.lanes[laneIndex].sixteenths[sixteenthIndex];
 
-                        /*
-                        Debug.Log
-                        (
-                            "Spawned " + spawnedObject.name +
-                            " in lane " + laneIndex
-                        );
-                        */
-
-                        if (spawnedObject.isMoveable)
-                        {
-                            LaunchedObject launchedObject = new()
-                            {
-                                interactable = spawnedObject,
-                                startPosition = spawnPoints[laneIndex].position,
-                                targetPosition = targetPoints[laneIndex].position,
-                                spawnSixteenth = nextSixteenthToLaunch - leadInSixteenths,
-                                targetSixteenth = nextSixteenthToLaunch
-                            };
-
-                            activeObjects.Add(launchedObject);
-                        }
-                    }
-                }
-                /*
-                Debug.Log(Conductor.instance.totalSixteenth);
-                Debug.Log("Ready to launch sixteenth: " + nextSixteenthToLaunch);
+                //interactable testing
                 Debug.Log
                 (
-                    "Global: " + nextSixteenthToLaunch +
-                    " Measure: " + measureIndex +
-                    " Sixteenth: " + sixteenthIndex
+                    "Checking lane " + laneIndex +
+                    ", measure " + measureIndex +
+                    ", sixteenth " + sixteenthIndex +
+                    ", interactable = " +
+                    (slot.interactable == null ? "NULL" : slot.interactable.name)
                 );
-                */
-                nextSixteenthToLaunch++;
+
+                //if there is an interactable on this slot, spawn it
+                if (slot.interactable != null)
+                {
+                    Interactable spawnedObject = Instantiate
+                    (
+                        slot.interactable,
+                        spawnPoints[laneIndex].position,
+                        spawnPoints[laneIndex].rotation
+                    );
+
+                    Debug.Log
+                    (
+                        "Spawned " + spawnedObject.name +
+                        " in lane " + laneIndex
+                    );
+
+                    if (spawnedObject.isMoveable)
+                    {
+                        LaunchedObject launchedObject = new()
+                        {
+                            interactable = spawnedObject,
+                            startPosition = spawnPoints[laneIndex].position,
+                            targetPosition = targetPoints[laneIndex].position,
+                            spawnSixteenth = nextSixteenthToLaunch - leadInSixteenths,
+                            targetSixteenth = nextSixteenthToLaunch
+                        };
+
+                        activeObjects.Add(launchedObject);
+                    }
+                }
             }
+
+            Debug.Log(Conductor.instance.totalSixteenth);
+
+            Debug.Log
+            (
+                "Ready to launch sixteenth: " +
+                nextSixteenthToLaunch
+            );
+
+            Debug.Log
+            (
+                "Global: " + nextSixteenthToLaunch +
+                " Measure: " + measureIndex +
+                " Sixteenth: " + sixteenthIndex
+            );
+
+            nextSixteenthToLaunch++;
         }
 
         //----------------------------------------Movement Section------------------------------------//

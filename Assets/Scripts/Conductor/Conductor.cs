@@ -7,9 +7,12 @@ public class Conductor : MonoBehaviour
     public float secondsPerBeat;
     public float secondsPerSixteenth;
     public double songStartDSPTime;
-     //public float startOffsetInSec;
-
     
+    [Range(-1.0f,0.5f)]
+    public float timingOffset = 0f;
+    //public float startOffsetInSec;
+
+
     public AudioSource songPlayer;
 
     //Dynamic Info, changes as song progresses.
@@ -50,7 +53,7 @@ public class Conductor : MonoBehaviour
     void Update()
     {
         if (!isSongPlaying) return;
-        songPositionInSeconds = (float)(AudioSettings.dspTime - songStartDSPTime);
+        songPositionInSeconds = songPositionInSeconds = (float)(AudioSettings.dspTime - songStartDSPTime) + timingOffset;
         songPositionInSixteenths = songPositionInSeconds / secondsPerSixteenth;
         totalSixteenth = (int)Mathf.Floor(songPositionInSixteenths);
 
