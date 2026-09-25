@@ -130,38 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a03f2cbf8ffef49ac64378428c8682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackMeter
---- !u!1 &332997697 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8452665580375037578, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-  m_PrefabInstance: {fileID: 1857238830}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &332997700
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332997697}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
 --- !u!1 &396409541
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,38 +252,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &593625771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9114178176776266986, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-  m_PrefabInstance: {fileID: 1857238830}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &593625774
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593625771}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
 --- !u!1 &702586306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,18 +1133,6 @@ PrefabInstance:
       propertyPath: attackMeter
       value: 
       objectReference: {fileID: 106586729}
-    - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      propertyPath: edgeCollider
-      value: 
-      objectReference: {fileID: 593625771}
-    - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      propertyPath: jumpDistance
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      propertyPath: moveDistance
-      value: 19
-      objectReference: {fileID: 0}
     - target: {fileID: 8635090474716012735, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1308,13 +1232,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8452665580375037578, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 332997700}
-    - targetCorrespondingSourceObject: {fileID: 9114178176776266986, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 593625774}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
 --- !u!1 &1864745393
 GameObject:
@@ -1430,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: bd75675e302d43a418602b95b681c868, type: 2}
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: leadInSixteenths
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'

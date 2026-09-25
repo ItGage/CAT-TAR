@@ -44,5 +44,6 @@ public class ParryStar : Interactable
         {
             hp.TakeDmg(damage);
         }
+        Destroy(gameObject, FXTimer);
     }
 }
