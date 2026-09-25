@@ -27,7 +27,7 @@ public class PlayerJumpState : PlayerBaseState
     public override void Tick()
     {
         if(jumpTimer < player.jumpTime)
-        {
+        {            
             //jumpTimer += (float)AudioSettings.dspTime;
             jumpTimer += Time.deltaTime;
         }

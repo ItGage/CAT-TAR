@@ -33,15 +33,17 @@ public class Player : MonoBehaviour
 
     // Private References
     private Vector2 playerStartingPos, desiredPosition;
-    private float leftBounds, rightBounds;
+    private float leftBounds, rightBounds, upBounds, downBounds;
     private Vector2 playerPos => playerSprite.transform.position;
 
     private void Start()
     {
         playerStartingPos = transform.position;
 
-        leftBounds = (playerStartingPos.x - (moveDistance * 2f)) - 1f;
-        rightBounds = (playerStartingPos.x + (moveDistance * 2f)) + 1f;
+        leftBounds = playerStartingPos.x - (moveDistance * 2f);
+        rightBounds = playerStartingPos.x + (moveDistance * 2f);
+        upBounds = playerStartingPos.y + jumpDistance;
+        downBounds = playerStartingPos.y;
     }
 
     public void RegisterHit()
@@ -122,7 +124,7 @@ public class Player : MonoBehaviour
     {
         desiredPosition = new Vector2(playerPos.x, playerPos.y + jumpDistance);
 
-        if(!isMoving)
+        if(desiredPosition.y <= upBounds && !isMoving)
         {
             StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
         }
@@ -132,7 +134,7 @@ public class Player : MonoBehaviour
     {
         desiredPosition = new Vector2(playerPos.x - moveDistance, playerPos.y);
 
-        if (desiredPosition.x > leftBounds && !isMoving)
+        if (desiredPosition.x >= leftBounds && !isMoving)
         {
             MoveCollider(desiredPosition);
             StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
@@ -143,7 +145,7 @@ public class Player : MonoBehaviour
     {
         desiredPosition = new Vector2(playerPos.x + moveDistance, playerPos.y);
 
-        if (desiredPosition.x < rightBounds && !isMoving)
+        if (desiredPosition.x <= rightBounds && !isMoving)
         {
             MoveCollider(desiredPosition);
             StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
@@ -154,7 +156,7 @@ public class Player : MonoBehaviour
     {
         desiredPosition = new Vector2(playerPos.x, playerPos.y - jumpDistance);
 
-        if(!isMoving)
+        if(desiredPosition.y >= downBounds && !isMoving)
         {
             StartCoroutine(LerpSpritePosition(playerPos, desiredPosition, moveLerpTime));
         }
@@ -168,8 +170,8 @@ public class Player : MonoBehaviour
 
     IEnumerator LerpSpritePosition(Vector2 startPos, Vector2 endPos, float timeLimit)
     {
-        float elapsedTime = 0f;
         isMoving = true;
+        float elapsedTime = 0f;
 
         while(elapsedTime < timeLimit)
         {

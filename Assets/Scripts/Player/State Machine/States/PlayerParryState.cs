@@ -10,15 +10,13 @@ public class PlayerParryState : PlayerBaseState
     {
         Debug.Log("Entering 'Parry State'");
 
+        parryTimer = 0f;
+
         // Set Player State
         player.SetState(PlayerState.parrying);
 
         // Set Animation State
         player.SetAnimation("Parry");
-
-        // Enter Logic
-        parryTimer = 0f;
-        player.MovePlayerDown();
     }
 
     public override void Tick()
@@ -37,9 +35,5 @@ public class PlayerParryState : PlayerBaseState
     public override void Exit()
     {
         Debug.Log("Exiting 'Parry State'");
-
-
-        // Exit Logic
-        player.MovePlayerUp();
     }
 }
