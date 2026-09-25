@@ -6,10 +6,28 @@ public class ParryStar : Interactable
     public bool isSpecial = false;
     private bool parried = false, canParry = false;
 
+    [SerializeField] private SpriteRenderer srGlow;
+
     public override void Awake()
     {
         base.Awake();
         if (isSpecial) sr.sprite = spriteArray[1];
+    }
+
+    public override void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject other = collision.gameObject;
+        //checks if collided with player
+        if (other.CompareTag("Edge"))
+        {
+            srGlow.enabled = true;
+            PlayerInteraction();
+        }
+        //checks if collided with end of track and destroys gameobject if true
+        else if (other.CompareTag("End"))
+        {
+            endOfTrack();
+        }
     }
     public override void PlayerInteraction()
     {
@@ -42,6 +60,7 @@ public class ParryStar : Interactable
         GameObject other = collision.gameObject;
         if (other.CompareTag("Player"))
         {
+            srGlow.enabled = false;
             dealDmg();
         }
     }

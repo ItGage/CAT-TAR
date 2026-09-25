@@ -494,7 +494,7 @@ RectTransform:
   m_GameObject: {fileID: 8710286506693778092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.66568, y: 0.66568, z: 6.6568}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 105502616860716955}
@@ -530,12 +530,12 @@ MonoBehaviour:
   playerCollider: {fileID: 8452665580375037578}
   edgeCollider: {fileID: 9114178176776266986}
   attackMeter: {fileID: 0}
-  canBeHit: 0
+  isMoving: 0
   moveDistance: 19
   moveLerpTime: 0.1
   jumpDistance: 5
-  jumpTime: 0.75
-  parryTime: 0.75
+  jumpTime: 0.7
+  parryTime: 0.05
   hitTime: 0
 --- !u!114 &3122141226679567466
 MonoBehaviour:

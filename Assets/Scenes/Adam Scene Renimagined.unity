@@ -1473,14 +1473,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 507449342}
     - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      propertyPath: jumpTime
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      propertyPath: parryTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
       propertyPath: attackMeter
       value: 
       objectReference: {fileID: 106586729}
@@ -1515,18 +1507,6 @@ PrefabInstance:
     - target: {fileID: 8635090474716012735, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635090474716012735, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.66568
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635090474716012735, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.66568
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635090474716012735, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6.6568
       objectReference: {fileID: 0}
     - target: {fileID: 8635090474716012735, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
       propertyPath: m_LocalPosition.x
