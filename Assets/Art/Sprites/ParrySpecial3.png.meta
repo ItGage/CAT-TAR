@@ -1,0 +1,1664 @@
+fileFormatVersion: 2
+guid: ebd193175fd83894ca06f2797ab7b741
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1812162625190128349
+    second: ParrySpecial3_0
+  - first:
+      213: -3125279396796428238
+    second: ParrySpecial3_1
+  - first:
+      213: 4286787988968807894
+    second: ParrySpecial3_2
+  - first:
+      213: -5066082377135160100
+    second: ParrySpecial3_3
+  - first:
+      213: -7753594228907561387
+    second: ParrySpecial3_4
+  - first:
+      213: -4382114455581917333
+    second: ParrySpecial3_5
+  - first:
+      213: -9038913345726947534
+    second: ParrySpecial3_6
+  - first:
+      213: -1592339056925872120
+    second: ParrySpecial3_7
+  - first:
+      213: -6735089811470742231
+    second: ParrySpecial3_8
+  - first:
+      213: 8788299333330346128
+    second: ParrySpecial3_9
+  - first:
+      213: -4274241085945182637
+    second: ParrySpecial3_10
+  - first:
+      213: -2676067348708384670
+    second: ParrySpecial3_11
+  - first:
+      213: -6550625388660247739
+    second: ParrySpecial3_12
+  - first:
+      213: -3425233244066668599
+    second: ParrySpecial3_13
+  - first:
+      213: 6937441146571925893
+    second: ParrySpecial3_14
+  - first:
+      213: -5632809140488819068
+    second: ParrySpecial3_15
+  - first:
+      213: 393151340493033731
+    second: ParrySpecial3_16
+  - first:
+      213: 6175188197288986302
+    second: ParrySpecial3_17
+  - first:
+      213: -8288594077870865317
+    second: ParrySpecial3_18
+  - first:
+      213: -5832580508115137532
+    second: ParrySpecial3_19
+  - first:
+      213: -541216556285942686
+    second: ParrySpecial3_20
+  - first:
+      213: -4616729147247530592
+    second: ParrySpecial3_21
+  - first:
+      213: 8228800169476298690
+    second: ParrySpecial3_22
+  - first:
+      213: -3352251164405129036
+    second: ParrySpecial3_23
+  - first:
+      213: 736095009598108607
+    second: ParrySpecial3_24
+  - first:
+      213: 4403784820902639984
+    second: ParrySpecial3_25
+  - first:
+      213: -2241071837776481314
+    second: ParrySpecial3_26
+  - first:
+      213: 6660793284556439797
+    second: ParrySpecial3_27
+  - first:
+      213: -8133216142545677291
+    second: ParrySpecial3_28
+  - first:
+      213: 5553854869453994210
+    second: ParrySpecial3_29
+  - first:
+      213: 8329375564747932110
+    second: ParrySpecial3_30
+  - first:
+      213: 7222894703802724835
+    second: ParrySpecial3_31
+  - first:
+      213: -7554257086868093610
+    second: ParrySpecial3_32
+  - first:
+      213: 7423986843876528358
+    second: ParrySpecial3_33
+  - first:
+      213: 3606754704113280589
+    second: ParrySpecial3_34
+  - first:
+      213: -4017022116742791130
+    second: ParrySpecial3_35
+  - first:
+      213: -76322633391841614
+    second: ParrySpecial3_36
+  - first:
+      213: -8194674759598521389
+    second: ParrySpecial3_37
+  - first:
+      213: -1861675316980614357
+    second: ParrySpecial3_38
+  - first:
+      213: 1296187039099907932
+    second: ParrySpecial3_39
+  - first:
+      213: -1887856880113277811
+    second: ParrySpecial3_40
+  - first:
+      213: -4725054612905062927
+    second: ParrySpecial3_41
+  - first:
+      213: -8725953825566755946
+    second: ParrySpecial3_42
+  - first:
+      213: -8704035350058434506
+    second: ParrySpecial3_43
+  - first:
+      213: 7768667298897357351
+    second: ParrySpecial3_44
+  - first:
+      213: 6022497958992103949
+    second: ParrySpecial3_45
+  - first:
+      213: 7384233476393231984
+    second: ParrySpecial3_46
+  - first:
+      213: -8846347196260083950
+    second: ParrySpecial3_47
+  - first:
+      213: 1984100824810776193
+    second: ParrySpecial3_48
+  - first:
+      213: 7909768427824635542
+    second: ParrySpecial3_49
+  - first:
+      213: -6233259107606076530
+    second: ParrySpecial3_50
+  - first:
+      213: -8642377233534422457
+    second: ParrySpecial3_51
+  - first:
+      213: -8445600686299957565
+    second: ParrySpecial3_52
+  - first:
+      213: 7515968967045193426
+    second: ParrySpecial3_53
+  - first:
+      213: 978195920069512283
+    second: ParrySpecial3_54
+  - first:
+      213: 7009712862978743964
+    second: ParrySpecial3_55
+  - first:
+      213: 3829483879262938692
+    second: ParrySpecial3_56
+  - first:
+      213: -3494955220643851242
+    second: ParrySpecial3_57
+  - first:
+      213: 3580210303027832851
+    second: ParrySpecial3_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ParrySpecial3_0
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1153
+        width: 444
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3259d4291b7e9d6e0800000000000000
+      internalID: -1812162625190128349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1022
+        width: 666
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2301a1272f6c0a4d0800000000000000
+      internalID: -3125279396796428238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1423
+        width: 165
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd95eda6fabd7b30800000000000000
+      internalID: 4286787988968807894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_3
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1150
+        width: 479
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd40ef35be8a1b9b0800000000000000
+      internalID: -5066082377135160100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_4
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1306
+        width: 288
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e227d0123b56490800000000000000
+      internalID: -7753594228907561387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_5
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1111
+        width: 428
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f7fedbe1a9f23c0800000000000000
+      internalID: -4382114455581917333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_6
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1210
+        width: 336
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f5868c3345f8280800000000000000
+      internalID: -9038913345726947534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1305
+        width: 256
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800f3f57010e6e9e0800000000000000
+      internalID: -1592339056925872120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_8
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1056
+        width: 231
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d0fe020872882a0800000000000000
+      internalID: -6735089811470742231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_9
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1253
+        width: 130
+        height: 660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09025f66eaf46f970800000000000000
+      internalID: 8788299333330346128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_10
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1393
+        width: 90
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3568bd3d068dea4c0800000000000000
+      internalID: -4274241085945182637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_11
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1216
+        width: 177
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260273dbce2bcdad0800000000000000
+      internalID: -2676067348708384670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_12
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1127
+        width: 233
+        height: 763
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543304c6ae08715a0800000000000000
+      internalID: -6550625388660247739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_13
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 1246
+        width: 416
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf1c8e13802770d0800000000000000
+      internalID: -3425233244066668599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_14
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1100
+        width: 598
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589299777fdb64060800000000000000
+      internalID: 6937441146571925893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_15
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 1261
+        width: 386
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e279d3eed34d1b0800000000000000
+      internalID: -5632809140488819068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_16
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1168
+        width: 510
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3015e09af01c47500800000000000000
+      internalID: 393151340493033731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_17
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1228
+        width: 447
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb64898a2fca2b550800000000000000
+      internalID: 6175188197288986302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 977
+        width: 793
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54c91dd99ff8fc80800000000000000
+      internalID: -8288594077870865317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_19
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1045
+        width: 648
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c0ee12ee28e0fa0800000000000000
+      internalID: -5832580508115137532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_20
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1143
+        width: 31
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2642408d8663d78f0800000000000000
+      internalID: -541216556285942686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_21
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 1046
+        width: 129
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad6e121d451eefb0800000000000000
+      internalID: -4616729147247530592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_22
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1014
+        width: 755
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c71f45f722923270800000000000000
+      internalID: 8228800169476298690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_23
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1036
+        width: 721
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b02eb3b3596a71d0800000000000000
+      internalID: -3352251164405129036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_24
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 1034
+        width: 633
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb37800e282273a00800000000000000
+      internalID: 736095009598108607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_25
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1143
+        width: 465
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079b82d56f26d1d30800000000000000
+      internalID: 4403784820902639984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 939
+        width: 602
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed37339890d16e0e0800000000000000
+      internalID: -2241071837776481314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_27
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 957
+        width: 818
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f04b40b334ef6c50800000000000000
+      internalID: 6660793284556439797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_28
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 1019
+        width: 563
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514971e8203012f80800000000000000
+      internalID: -8133216142545677291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_29
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 836
+        width: 603
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8f0e30491431d40800000000000000
+      internalID: 5553854869453994210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 932
+        width: 210
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec18e99f1f2e79370800000000000000
+      internalID: 8329375564747932110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_31
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 868
+        width: 322
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1363ee670ec3460800000000000000
+      internalID: 7222894703802724835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_32
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 605
+        width: 708
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65500432433e92790800000000000000
+      internalID: -7554257086868093610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_33
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 898
+        width: 355
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e01f6653bc470760800000000000000
+      internalID: 7423986843876528358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_34
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 785
+        width: 471
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4624a24b44cd0230800000000000000
+      internalID: 3606754704113280589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_35
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 933
+        width: 275
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62088acfaaba048c0800000000000000
+      internalID: -4017022116742791130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_36
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 712
+        width: 657
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be5b5428f8d0fef0800000000000000
+      internalID: -76322633391841614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 773
+        width: 511
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3454039baa64e80800000000000000
+      internalID: -8194674759598521389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_38
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 615
+        width: 543
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2bf14ca9200a26e0800000000000000
+      internalID: -1861675316980614357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_39
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 410
+        width: 742
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5fe30c9e3bfcf110800000000000000
+      internalID: 1296187039099907932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_40
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 346
+        width: 596
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84221a7b2cfcc5e0800000000000000
+      internalID: -1887856880113277811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_41
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 761
+        width: 195
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd097d2ddb3d6eb0800000000000000
+      internalID: -4725054612905062927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_42
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 31
+        width: 186
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693f1ac4a3f27e680800000000000000
+      internalID: -8725953825566755946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_43
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 685
+        width: 128
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630035f07fd053780800000000000000
+      internalID: -8704035350058434506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_44
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 98
+        width: 384
+        height: 744
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a68f88fb9dfcb60800000000000000
+      internalID: 7768667298897357351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_45
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 527
+        width: 721
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a4d323cf5349350800000000000000
+      internalID: 6022497958992103949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_46
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 265
+        width: 581
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07667f239311a7660800000000000000
+      internalID: 7384233476393231984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_47
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 285
+        width: 274
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217152f48167b3580800000000000000
+      internalID: -8846347196260083950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_48
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 220
+        width: 341
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186e76d1031f88b10800000000000000
+      internalID: 1984100824810776193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_49
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 142
+        width: 388
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e56143a7425cd60800000000000000
+      internalID: 7909768427824635542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_50
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 107
+        width: 347
+        height: 646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83eb2aedd30f79a0800000000000000
+      internalID: -6233259107606076530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_51
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 68
+        width: 259
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742f14402bb101880800000000000000
+      internalID: -8642377233534422457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_52
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 38
+        width: 212
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6bb4a2ce23bca80800000000000000
+      internalID: -8445600686299957565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_53
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 18
+        width: 123
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de969744f51e4860800000000000000
+      internalID: 7515968967045193426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_54
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 0
+        width: 72
+        height: 710
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5cca70b100439d00800000000000000
+      internalID: 978195920069512283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_55
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 5
+        width: 261
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e9557b5b0874160800000000000000
+      internalID: 7009712862978743964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_56
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 141
+        width: 342
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4466d887c4f052530800000000000000
+      internalID: 3829483879262938692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_57
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 397
+        width: 507
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61450af6ebc6f7fc0800000000000000
+      internalID: -3494955220643851242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParrySpecial3_58
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 23
+        width: 32
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318ea254d467fa130800000000000000
+      internalID: 3580210303027832851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ParrySpecial3_0: -1812162625190128349
+      ParrySpecial3_1: -3125279396796428238
+      ParrySpecial3_10: -4274241085945182637
+      ParrySpecial3_11: -2676067348708384670
+      ParrySpecial3_12: -6550625388660247739
+      ParrySpecial3_13: -3425233244066668599
+      ParrySpecial3_14: 6937441146571925893
+      ParrySpecial3_15: -5632809140488819068
+      ParrySpecial3_16: 393151340493033731
+      ParrySpecial3_17: 6175188197288986302
+      ParrySpecial3_18: -8288594077870865317
+      ParrySpecial3_19: -5832580508115137532
+      ParrySpecial3_2: 4286787988968807894
+      ParrySpecial3_20: -541216556285942686
+      ParrySpecial3_21: -4616729147247530592
+      ParrySpecial3_22: 8228800169476298690
+      ParrySpecial3_23: -3352251164405129036
+      ParrySpecial3_24: 736095009598108607
+      ParrySpecial3_25: 4403784820902639984
+      ParrySpecial3_26: -2241071837776481314
+      ParrySpecial3_27: 6660793284556439797
+      ParrySpecial3_28: -8133216142545677291
+      ParrySpecial3_29: 5553854869453994210
+      ParrySpecial3_3: -5066082377135160100
+      ParrySpecial3_30: 8329375564747932110
+      ParrySpecial3_31: 7222894703802724835
+      ParrySpecial3_32: -7554257086868093610
+      ParrySpecial3_33: 7423986843876528358
+      ParrySpecial3_34: 3606754704113280589
+      ParrySpecial3_35: -4017022116742791130
+      ParrySpecial3_36: -76322633391841614
+      ParrySpecial3_37: -8194674759598521389
+      ParrySpecial3_38: -1861675316980614357
+      ParrySpecial3_39: 1296187039099907932
+      ParrySpecial3_4: -7753594228907561387
+      ParrySpecial3_40: -1887856880113277811
+      ParrySpecial3_41: -4725054612905062927
+      ParrySpecial3_42: -8725953825566755946
+      ParrySpecial3_43: -8704035350058434506
+      ParrySpecial3_44: 7768667298897357351
+      ParrySpecial3_45: 6022497958992103949
+      ParrySpecial3_46: 7384233476393231984
+      ParrySpecial3_47: -8846347196260083950
+      ParrySpecial3_48: 1984100824810776193
+      ParrySpecial3_49: 7909768427824635542
+      ParrySpecial3_5: -4382114455581917333
+      ParrySpecial3_50: -6233259107606076530
+      ParrySpecial3_51: -8642377233534422457
+      ParrySpecial3_52: -8445600686299957565
+      ParrySpecial3_53: 7515968967045193426
+      ParrySpecial3_54: 978195920069512283
+      ParrySpecial3_55: 7009712862978743964
+      ParrySpecial3_56: 3829483879262938692
+      ParrySpecial3_57: -3494955220643851242
+      ParrySpecial3_58: 3580210303027832851
+      ParrySpecial3_6: -9038913345726947534
+      ParrySpecial3_7: -1592339056925872120
+      ParrySpecial3_8: -6735089811470742231
+      ParrySpecial3_9: 8788299333330346128
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
