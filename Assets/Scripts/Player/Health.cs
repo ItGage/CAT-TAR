@@ -4,7 +4,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHp = 9f, currentHp;
     [Tooltip("Total number of special parries needed to heal")]
-    [SerializeField] private int numParriesToHeal;
+    [SerializeField] private int numParriesToHeal=3;
     [Tooltip("Current number of special parries")]
     [SerializeField] private int sParryCount=0;
     [SerializeField] private HpUI hpUI;

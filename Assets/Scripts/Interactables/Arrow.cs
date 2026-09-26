@@ -9,7 +9,7 @@ public class Arrow : Interactable
 
     private ScoreKeeper scoreKeep;
 
-    private bool canAttack = false, played = false;
+    private bool canAttack = false, played = false, missed=false;
     private InputReader playerInput;
     public enum Direction
     {
@@ -207,6 +207,7 @@ public class Arrow : Interactable
         player.RegisterHit();
         audioPlayer.PlayOneShot(wrongSFX);
         scoreKeep.AddMissedHit();
+        missed = true;
         played = true;
         //disable collider so the player can't make another input
         playerInput.LeftPerformed -= LeftPress;
@@ -217,7 +218,14 @@ public class Arrow : Interactable
     }
     public void Missed()
     {
+        missed = true;
         audioPlayer.PlayOneShot(missedSFX);
         scoreKeep.AddMissedHit();
+    }
+
+    public override void endOfTrack()
+    {
+        if (!missed && !played) Missed();
+        base.endOfTrack();
     }
 }

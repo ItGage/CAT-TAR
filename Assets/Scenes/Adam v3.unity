@@ -2479,9 +2479,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
+      propertyPath: endScale
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: songChart
       value: 
       objectReference: {fileID: 11400000, guid: 053120d7282d51749a3a18cd048ed6c3, type: 2}
+    - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
+      propertyPath: startingScale
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: leadInSixteenths
       value: 12
