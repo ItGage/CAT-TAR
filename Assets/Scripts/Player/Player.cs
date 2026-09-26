@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
         rightBounds = playerStartingPos.x + (moveDistance * 2f) + 0.1f;
         upBounds = playerStartingPos.y + jumpDistance + 0.1f;
         downBounds = playerStartingPos.y - 0.1f;
+
+        GameManager.gm.player = this;
     }
 
     private void Update()

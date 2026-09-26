@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public int currentLevel;
     public LevelManager currentLevelManager;
+    public AudioManager audioManager;
+    public Player player;
 
     private void Awake()
     {

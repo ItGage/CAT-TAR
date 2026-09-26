@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class AttackMeter : MonoBehaviour
 {
     public float duration;
+    public float damageIfFailed;
 
     [Header("Score")]
     [SerializeField] private float currentScore;
@@ -97,5 +98,18 @@ public class AttackMeter : MonoBehaviour
         Vector3 spawnPosition = Vector2.Lerp(bottom.transform.position, top.transform.position, threshold);
 
         thresholdMark.transform.position = spawnPosition;
+    }
+
+    public void CheckThreshold()
+    {
+        if(currentScore / maxScore >= threshold)
+        {
+            Debug.Log("Threshold Met! Damaging Boss!");
+        }
+        else
+        {
+            Debug.Log("Threshold Met! Player takes 3 damage!");
+            GameManager.gm.player.GetHealth().TakeDmg(damageIfFailed);
+        }
     }
 }

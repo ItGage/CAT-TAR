@@ -725,7 +725,7 @@ MonoBehaviour:
   isMoving: 0
   moveDistance: 35
   moveLerpTime: 0.1
-  jumpDistance: 5
+  jumpDistance: 3
   jumpTime: 0.7
   parryTime: 0.25
   hitTime: 0.1

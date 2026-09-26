@@ -87,6 +87,7 @@ public class LevelManager : MonoBehaviour
 
     public void DeactivateAttackMeter()
     {
+        currentSection.attackMeter.CheckThreshold();
         currentSection.attackMeter.slider.gameObject.SetActive(false);
     }
 
