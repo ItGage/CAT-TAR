@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6541666041c96cd419e04972be6bfbd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Launcher
-  songChart: {fileID: 11400000, guid: d5257ab932fdd6b4daf7721146703208, type: 2}
+  songChart: {fileID: 11400000, guid: 053120d7282d51749a3a18cd048ed6c3, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -57,4 +57,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  leadInSixteenths: 8
+  leadInSixteenths: 12

@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 52c444f9e0f11b145aa8004bf2496660, type: 3}
+  m_Resource: {fileID: 8300000, guid: b723078f61781d24ab5d648e7dc65195, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -174,10 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f45cf602a53124a9c4cac0df9e3030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Conductor
-  beatsPerMin: 92.5
+  beatsPerMin: 70
   secondsPerBeat: 0
   secondsPerSixteenth: 0
   songStartDSPTime: 0
+  timingOffset: -0.12
   songPlayer: {fileID: 6757831621270759811}
   isSongPlaying: 0
   songPositionInSeconds: 0

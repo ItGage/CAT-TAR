@@ -4,12 +4,12 @@ public class Arrow : Interactable
 {
     public ArrowCollider badEarly, badLate, goodEarly, goodLate, perfect;
 
-    [SerializeField] private AudioClip perfectSFX, goodSFX, badSFX, wrongSFX;
+    [SerializeField] private AudioClip perfectSFX, goodSFX, badSFX, wrongSFX, missedSFX;
     [SerializeField] private SpriteRenderer srGlow;
 
     private ScoreKeeper scoreKeep;
 
-    private bool canAttack = false;
+    private bool canAttack = false, played = false;
     private InputReader playerInput;
     public enum Direction
     {
@@ -60,13 +60,14 @@ public class Arrow : Interactable
     public override void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject other = collision.gameObject;
-        //checks if collided with player
+            //checks if collided with player
+            
         if (other.CompareTag("Edge"))
         {
             srGlow.enabled = true;
             PlayerInteraction();
         }
-        //checks if collided with end of track and destroys gameobject if true
+        //checks if collided with end of track and destroys gameobject if true   
         else if (other.CompareTag("End"))
         {
             endOfTrack();
@@ -81,7 +82,13 @@ public class Arrow : Interactable
         {
             srGlow.enabled = false;
             canAttack = false;
+
+            if (!played)
+            {
+                Missed();
+            }
         }
+
     }
 
     private void LeftPress()
@@ -185,6 +192,7 @@ public class Arrow : Interactable
 
         //play VFX and SFX for correct note
 
+        played = true;
         //destory the object after FX are played
         playerInput.LeftPerformed -= LeftPress;
         playerInput.UpPerformed -= UpPress;
@@ -198,11 +206,18 @@ public class Arrow : Interactable
         //change sprite to faded sprite
         player.RegisterHit();
         audioPlayer.PlayOneShot(wrongSFX);
+        scoreKeep.AddMissedHit();
+        played = true;
         //disable collider so the player can't make another input
         playerInput.LeftPerformed -= LeftPress;
         playerInput.UpPerformed -= UpPress;
         playerInput.RightPerformed -= RightPress;
         playerInput.DownPerformed -= DownPress;
-        gameObject.GetComponent<BoxCollider2D>().enabled = false; ;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+    }
+    public void Missed()
+    {
+        audioPlayer.PlayOneShot(missedSFX);
+        scoreKeep.AddMissedHit();
     }
 }

@@ -58,7 +58,7 @@ public class ParryStar : Interactable
         if (parried) return;
 
         GameObject other = collision.gameObject;
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Edge"))
         {
             srGlow.enabled = false;
             dealDmg();

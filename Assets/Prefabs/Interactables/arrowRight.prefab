@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 996273983303344048}
   - component: {fileID: 5478326612165103665}
   - component: {fileID: 5491575368504650215}
+  - component: {fileID: 5795586403998266530}
   m_Layer: 0
   m_Name: GoodColliderLate
   m_TagString: Untagged
@@ -243,6 +244,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderGoodLate
   inTrigger: 0
+--- !u!50 &5795586403998266530
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117501335848182400}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &3789688145383333169
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +283,7 @@ GameObject:
   - component: {fileID: 5103986817001218441}
   - component: {fileID: 5854489315472837801}
   - component: {fileID: 7024926941871493125}
+  - component: {fileID: 6538405562074355502}
   m_Layer: 0
   m_Name: BadColliderLate
   m_TagString: Untagged
@@ -395,6 +424,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderBadLate
   inTrigger: 0
+--- !u!50 &6538405562074355502
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789688145383333169}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &6208504871382828137
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +676,7 @@ MonoBehaviour:
   goodSFX: {fileID: 8300000, guid: 094ccba219405f14fbd140142af5cf05, type: 3}
   badSFX: {fileID: 8300000, guid: 094ccba219405f14fbd140142af5cf05, type: 3}
   wrongSFX: {fileID: 8300000, guid: caa981b12d0e800449d0162bc8c160cc, type: 3}
+  missedSFX: {fileID: 8300000, guid: caa981b12d0e800449d0162bc8c160cc, type: 3}
   srGlow: {fileID: 6908535067080521656}
   dir: 2
 --- !u!61 &7714402849437033530
@@ -804,6 +861,7 @@ GameObject:
   - component: {fileID: 3065035366362735725}
   - component: {fileID: 8471410771886945185}
   - component: {fileID: 4088714305487919736}
+  - component: {fileID: 6239994893857836013}
   m_Layer: 0
   m_Name: BadColliderEarly
   m_TagString: Untagged
@@ -944,6 +1002,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderBadEarly
   inTrigger: 0
+--- !u!50 &6239994893857836013
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6982364072071452801}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &7186794667269554679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,6 +1132,7 @@ GameObject:
   - component: {fileID: 5260701413436555762}
   - component: {fileID: 5432985858451429561}
   - component: {fileID: 5317354385195304703}
+  - component: {fileID: 4747706737723738733}
   m_Layer: 0
   m_Name: GoodColliderEarly
   m_TagString: Untagged
@@ -1187,3 +1273,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowColliderGoodEarly
   inTrigger: 0
+--- !u!50 &4747706737723738733
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638455086888312103}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
