@@ -26,14 +26,14 @@ RectTransform:
   m_GameObject: {fileID: 2319184874686674598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 112.69125, y: 1, z: 1}
+  m_LocalScale: {x: 160, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8635090474716012735}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000053724, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1014171988805933614
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: dcb1f77d688e6e34b90e2db6b553fc0e, type: 3}
-  m_Color: {r: 0.38679248, g: 0, b: 0.0071369754, a: 1}
+  m_Color: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -123,14 +123,14 @@ RectTransform:
   m_GameObject: {fileID: 5304844475146315639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8635090474716012735}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -18}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1951889776887079429
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 585489585357299884, guid: 79ec50fc77e8b154eb9bc012ff4a314c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -389,7 +389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -18}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &8843635807496100525
@@ -527,15 +527,15 @@ MonoBehaviour:
   playerAnimator: {fileID: 1419173782859581610}
   playerStateMachine: {fileID: 3122141226679567466}
   playerSprite: {fileID: 5304844475146315639}
-  playerCollider: {fileID: 8452665580375037578}
+  boxCollider: {fileID: 8452665580375037578}
   edgeCollider: {fileID: 9114178176776266986}
   attackMeter: {fileID: 0}
   isMoving: 0
-  moveDistance: 19
+  moveDistance: 35
   moveLerpTime: 0.1
   jumpDistance: 5
   jumpTime: 0.7
-  parryTime: 0.05
+  parryTime: 0.25
   hitTime: 0
 --- !u!114 &3122141226679567466
 MonoBehaviour:
