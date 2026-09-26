@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FINAL/MainMenu.unity
+    path: Assets/Scenes/FINAL/Main Menu.unity
     guid: dad4d8887cf72d145a7dbe1d7147cb4e
   - enabled: 1
     path: Assets/Scenes/FINAL/Level 1.unity
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FINAL/Boss Approaches 3.unity
     guid: 29f17895a26b24b41b8a44c02834b1c6
+  - enabled: 1
+    path: Assets/Scenes/FINAL/Report Card.unity
+    guid: d6eefabcc2998ab43aca7edf75720c7b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

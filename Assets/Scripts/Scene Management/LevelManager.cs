@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public int numMeasuresInLevel;
+    
     [Header("UI Elements")]
     public ScoreKeeper scoreKeep;
     public GameObject attackMeterUI;
@@ -40,6 +43,11 @@ public class LevelManager : MonoBehaviour
         if(currentMeasure == nextSection.startMeasure)
         {
             NextSection();
+        }
+
+        if(currentMeasure == numMeasuresInLevel + 1)
+        {
+            EndLevel();
         }
     }
 
@@ -80,5 +88,10 @@ public class LevelManager : MonoBehaviour
     public void DeactivateAttackMeter()
     {
         attackMeterUI.SetActive(false);
+    }
+
+    public void EndLevel()
+    {
+        SceneManager.LoadScene("Report Card");
     }
 }

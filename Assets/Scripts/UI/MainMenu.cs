@@ -36,18 +36,21 @@ public class MainMenu : MonoBehaviour
     private void LoadLevel1()
     {
         StopAllCoroutines();
+        GameManager.gm.currentLevel = 1;
         SceneManager.LoadScene("Boss Approaches 1");
     }
 
     private void LoadLevel2()
     {
         StopAllCoroutines();
+        GameManager.gm.currentLevel = 2;
         SceneManager.LoadScene("Boss Approaches 2");
     }
 
     private void LoadLevel3()
     {
         StopAllCoroutines();
+        GameManager.gm.currentLevel = 3;
         SceneManager.LoadScene("Boss Approaches 3");
     }
 
