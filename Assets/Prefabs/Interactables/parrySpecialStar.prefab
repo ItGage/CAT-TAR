@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f4a7ac6f4199974b8b447bff654574c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParryStar
-  damage: 0.25
+  damage: 0.5
   spriteArray:
   - {fileID: -3901428770384818766, guid: 03f04011202a235439f07aab33e6060e, type: 3}
   - {fileID: 2305795230628510967, guid: daa9747e4a106004bb9a038a6ea8fd35, type: 3}

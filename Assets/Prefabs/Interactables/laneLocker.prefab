@@ -152,11 +152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c7b25640666cd43b2be39c4d700905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaneLocker
-  damage: 0.25
+  damage: 1
   spriteArray: []
   sr: {fileID: 3700355684631834637}
   FXTimer: 0
   isMoveable: 1
+  audioPlayer: {fileID: 0}
   countdownTime: 0.21
   activeTime: 0.75
   fxTime: 1.96

@@ -44,6 +44,7 @@ public class Health : MonoBehaviour
             currentHp += 1;
 
             if (currentHp > maxHp) currentHp = maxHp;
+            hpUI.SetHP(currentHp);
         }
     }
     private void Lose()

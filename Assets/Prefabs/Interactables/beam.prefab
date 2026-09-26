@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f3bedb7db25404aa6f811f3673e35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Beam
-  damage: 0.25
+  damage: 1
   spriteArray: []
   sr: {fileID: 1001404486473974595}
   FXTimer: 0
