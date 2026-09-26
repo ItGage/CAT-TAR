@@ -41,10 +41,10 @@ public class Player : MonoBehaviour
     {
         playerStartingPos = playerSprite.transform.position;
 
-        leftBounds = playerStartingPos.x - (moveDistance * 2f);
-        rightBounds = playerStartingPos.x + (moveDistance * 2f);
-        upBounds = playerStartingPos.y + jumpDistance;
-        downBounds = playerStartingPos.y;
+        leftBounds = playerStartingPos.x - (moveDistance * 2f) - 0.1f;
+        rightBounds = playerStartingPos.x + (moveDistance * 2f) + 0.1f;
+        upBounds = playerStartingPos.y + jumpDistance + 0.1f;
+        downBounds = playerStartingPos.y - 0.1f;
     }
 
     private void Update()
