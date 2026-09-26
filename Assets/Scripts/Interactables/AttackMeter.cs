@@ -7,10 +7,12 @@ public class AttackMeter : MonoBehaviour
     public float duration;
 
     [Header("Score")]
+    [SerializeField] private float currentScore;
+    [Space(5)]
     [SerializeField] private float targetScore;
     [SerializeField] private float maxScore;
     [Space(5)]
-    [SerializeField] private float currentScore;
+    [SerializeField] private float threshold;
 
     [Header("Note Increments")]
     [SerializeField] private float baseIncrement;
@@ -19,30 +21,43 @@ public class AttackMeter : MonoBehaviour
     [SerializeField] private float perfectMultiplier;
 
     [Header("UI Elements")]
-    [SerializeField] private Slider slider;
-
-    private float threshold;
+    public Slider slider;
+    [Space(5)]
+    [SerializeField] private GameObject thresholdMark;
+    [Space(5)]
+    [SerializeField] private GameObject top;
+    [SerializeField] private GameObject bottom;
 
     private void Start()
     {
         threshold = targetScore / maxScore;
 
+        SpawnThresholdMark();
         ResetMeter();
     }
 
     public void BadHit()
     {
-        FillMeter(baseIncrement * badMultiplier);
+        float increment = baseIncrement * badMultiplier;
+        FillMeter(increment);
+
+        Debug.Log("PERFECT HIT! Add " + increment + " points!");
     }
 
     public void GoodHit()
     {
+        float increment = baseIncrement * goodMultiplier;
         FillMeter(baseIncrement * goodMultiplier);
+
+        Debug.Log("PERFECT HIT! Add " + increment + " points!");
     }
 
     public void PerfectHit()
     {
-        FillMeter(baseIncrement * perfectMultiplier);
+        float increment = baseIncrement * perfectMultiplier;
+        FillMeter(increment);
+
+        Debug.Log("PERFECT HIT! Add " + increment + " points!");
     }
 
     private void FillMeter(float amount)
@@ -75,5 +90,12 @@ public class AttackMeter : MonoBehaviour
     {
         ResetScore();
         UpdateSlider(0f);
+    }
+
+    private void SpawnThresholdMark()
+    {
+        Vector3 spawnPosition = Vector2.Lerp(bottom.transform.position, top.transform.position, threshold);
+
+        thresholdMark.transform.position = spawnPosition;
     }
 }

@@ -47,7 +47,7 @@ public class Arrow : Interactable
                 break;
         }
 
-        attackMeter = player.GetAttackMeter();
+        attackMeter = GameManager.gm.currentLevelManager.currentSection.attackMeter;
 
         playerInput = player.GetInput();
         playerInput.LeftPerformed += LeftPress;

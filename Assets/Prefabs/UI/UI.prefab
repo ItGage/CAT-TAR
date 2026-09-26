@@ -350,7 +350,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff2e4f4fce2c02d4ca6a354380155a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Retry
-  pnl: {fileID: 230149719139142643}
+  panel: {fileID: 0}
+  attackMeter: {fileID: 0}
+  hearts: {fileID: 0}
   songPlayer: {fileID: 0}
   conductor: {fileID: 0}
 --- !u!1 &879830933564602450
@@ -581,6 +583,38 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1466444989493817111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7214582379586241072}
+  m_Layer: 0
+  m_Name: Attack Meters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7214582379586241072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466444989493817111}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -959.8111, y: -540.1063, z: 0}
+  m_LocalScale: {x: 1.3604693, y: 1.3604693, z: 1.3604693}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3727857659790394105}
+  m_Father: {fileID: 8556775505806088294}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1496863168079420642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,10 +1296,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3727857659790394105}
   - {fileID: 4181350906300161496}
   - {fileID: 2782545155164881439}
   - {fileID: 5494032688663935463}
+  - {fileID: 7214582379586241072}
   m_Father: {fileID: 4398734338410173868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1399,7 +1433,7 @@ GameObject:
   - component: {fileID: 3727857659790394105}
   - component: {fileID: 6371955271762235759}
   m_Layer: 5
-  m_Name: Attack Meter
+  m_Name: Meter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1412,17 +1446,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7362241012159241963}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7350404, y: 0.7350404, z: 0.7350405}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8190080567941148177}
-  m_Father: {fileID: 8556775505806088294}
+  m_Father: {fileID: 7214582379586241072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 794}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6371955271762235759
@@ -1438,14 +1472,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackMeter
   duration: 0
+  currentScore: 0
   targetScore: 50
   maxScore: 100
-  currentScore: 0
+  threshold: 0
   baseIncrement: 5
   badMultiplier: 0.5
   goodMultiplier: 0.8
   perfectMultiplier: 1
   slider: {fileID: 7875324134677906465}
+  thresholdMark: {fileID: 0}
+  top: {fileID: 0}
+  bottom: {fileID: 0}
 --- !u!1 &7491529346246967930
 GameObject:
   m_ObjectHideFlags: 0

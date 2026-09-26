@@ -7,8 +7,6 @@ public class LevelManager : MonoBehaviour
     
     [Header("UI Elements")]
     public ScoreKeeper scoreKeep;
-    public GameObject attackMeterUI;
-    public AttackMeter attackMeterScript;
 
     [Header("Music Sections")]
     public Conductor conductor;
@@ -19,13 +17,16 @@ public class LevelManager : MonoBehaviour
     public LevelSection nextSection;
     [Space(5)]
     public LevelSection[] sections;
-
-    private int sectionIndex;
+    [Space(5)]
+    public int sectionIndex;
 
     private void Start()
     {
         sectionIndex = 0;
         SetCurrentSection();
+        CheckSection();
+
+        GameManager.gm.currentLevelManager = this;
     }
 
     private void Update()
@@ -81,13 +82,12 @@ public class LevelManager : MonoBehaviour
 
     public void ActivateAttackMeter()
     {
-        attackMeterScript.ResetMeter();
-        attackMeterUI.SetActive(true);
+        currentSection.attackMeter.slider.gameObject.SetActive(true);
     }
 
     public void DeactivateAttackMeter()
     {
-        attackMeterUI.SetActive(false);
+        currentSection.attackMeter.slider.gameObject.SetActive(false);
     }
 
     public void EndLevel()

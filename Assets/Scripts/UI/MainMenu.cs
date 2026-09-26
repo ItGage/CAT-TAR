@@ -1,13 +1,20 @@
 using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     [Header("UI elements")]
+    public GameObject startButton;
+    public GameObject quitButton;
     public GameObject lvlSelect;
     public GameObject lvlButtons;
+    public GameObject audioSettings;
+    public GameObject masterSlider;
+    public GameObject musicSlider;
+    public GameObject sfxSlider;
 
     [Header("Character FX")]
     public GameObject character;
@@ -27,6 +34,7 @@ public class MainMenu : MonoBehaviour
     public float timeBetweenArrows;
 
     private Direction randomDir;
+    private bool audioSettingsOpen = false;
 
     private void Start()
     {
@@ -177,6 +185,38 @@ public class MainMenu : MonoBehaviour
     {
         lvlSelect.SetActive(false);
         lvlButtons.SetActive(true);
+    }
+
+    private void ActivateButtons(bool activate)
+    {
+        startButton.SetActive(activate);
+        lvlSelect.SetActive(activate);
+        quitButton.SetActive(activate);
+    }
+
+    private void ActivateSliders(bool activate)
+    {
+        masterSlider.SetActive(activate);
+        musicSlider.SetActive(activate);
+        sfxSlider.SetActive(activate);
+    }
+
+    public void ToggleAudioSettings()
+    {
+        if(audioSettingsOpen)
+        {
+            ActivateButtons(true);
+            ActivateSliders(false);
+
+            audioSettingsOpen = false;
+        }
+        else
+        {
+            ActivateButtons(false);
+            ActivateSliders(true);
+
+            audioSettingsOpen = true;
+        }
     }
 
 

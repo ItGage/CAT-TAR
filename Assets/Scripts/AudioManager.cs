@@ -3,21 +3,28 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    AudioMixer masterMixer;
+    public AudioMixer masterMixer;
+    [Space(5)]
+    public float masterVolume;
+    public float musicVolume;
+    public float sfxVolume;
 
     public void ChangeMasterVolume(float volume)
     {
-        masterMixer.SetFloat("MasterVolume", Mathf.Log(volume) * 20);
+        masterVolume = Mathf.Log(volume) * 20;
+        masterMixer.SetFloat("MasterVolume", masterVolume);
     }
 
     public void ChangeMusicVolume(float volume)
     {
-        masterMixer.SetFloat("MusicVolume", Mathf.Log(volume) * 20);
+        musicVolume = Mathf.Log(volume) * 20;
+        masterMixer.SetFloat("MusicVolume", musicVolume);
     }
 
     public void ChangeSFXVolume(float volume)
     {
-        masterMixer.SetFloat("SFXVolume", Mathf.Log(volume) * 20);
+        sfxVolume = Mathf.Log(volume) * 20;
+        masterMixer.SetFloat("SFXVolume", sfxVolume);
     }
 
 }

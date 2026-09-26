@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gm { get; private set; }
 
     public int currentLevel;
+    public LevelManager currentLevelManager;
 
     private void Awake()
     {
