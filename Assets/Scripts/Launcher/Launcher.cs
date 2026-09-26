@@ -4,15 +4,20 @@ using System.Collections.Generic;
 public class Launcher : MonoBehaviour
 {
     public SongChart songChart;
-
+    [Space(5)]
     public Transform[] spawnPoints;
     public Transform[] targetPoints;
-
+    [Space(5)]
     public int leadInSixteenths = 8;
+    [Space(5)]
+    public float startingScale;
+    public float endScale;
    
     private int nextSixteenthToLaunch = 0;
 
     private List<LaunchedObject> activeObjects = new();
+
+    private Vector2 newPosition, newScale;
 
     void Update()
     {
@@ -73,6 +78,8 @@ public class Launcher : MonoBehaviour
                             interactable = spawnedObject,
                             startPosition = spawnPoints[laneIndex].position,
                             targetPosition = targetPoints[laneIndex].position,
+                            startScale = spawnedObject.transform.localScale * startingScale,
+                            targetScale = spawnedObject.transform.localScale * endScale,
                             spawnSixteenth = nextSixteenthToLaunch - leadInSixteenths,
                             targetSixteenth = nextSixteenthToLaunch
                         };
@@ -116,7 +123,7 @@ public class Launcher : MonoBehaviour
                 (Conductor.instance.songPositionInSixteenths - launchedObject.spawnSixteenth) /
                 (launchedObject.targetSixteenth - launchedObject.spawnSixteenth);
 
-            Vector2 newPosition = Vector2.LerpUnclamped
+            newPosition = Vector2.LerpUnclamped
             (
                 launchedObject.startPosition,
                 launchedObject.targetPosition,
@@ -124,6 +131,15 @@ public class Launcher : MonoBehaviour
             );
 
             launchedObject.interactable.transform.position = newPosition;
+
+            newScale = Vector2.LerpUnclamped
+            (
+                launchedObject.startScale,
+                launchedObject.targetScale,
+                progress
+            );
+
+            launchedObject.interactable.transform.localScale = newScale;
         }
     }
 }
