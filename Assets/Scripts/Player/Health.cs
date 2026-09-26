@@ -8,7 +8,9 @@ public class Health : MonoBehaviour
     [Tooltip("Current number of special parries")]
     [SerializeField] private int sParryCount=0;
     [SerializeField] private HpUI hpUI;
-    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private Retry retry;
+
+   [SerializeField] private AudioSource audioPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,6 +51,6 @@ public class Health : MonoBehaviour
     }
     private void Lose()
     {
-        //sends you to lose screen so you can retry
+        retry.ShowPanel();
     }
 }

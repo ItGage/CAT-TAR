@@ -772,6 +772,7 @@ MonoBehaviour:
   numParriesToHeal: 3
   sParryCount: 0
   hpUI: {fileID: 0}
+  retry: {fileID: 0}
   audioPlayer: {fileID: 3639235907393983394}
 --- !u!1 &9114178176776266986
 GameObject:
