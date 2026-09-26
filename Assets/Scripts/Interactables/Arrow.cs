@@ -1,5 +1,13 @@
 using UnityEngine;
 
+public enum Direction
+{
+    Left,
+    Up,
+    Right,
+    Down
+}
+
 public class Arrow : Interactable
 {
     public ArrowCollider badEarly, badLate, goodEarly, goodLate, perfect;
@@ -11,13 +19,6 @@ public class Arrow : Interactable
 
     private bool canAttack = false, played = false, missed=false;
     private InputReader playerInput;
-    public enum Direction
-    {
-        Left,
-        Up,
-        Right,
-        Down
-    }
 
 
     //change to player ref for attackMeter
