@@ -5194,6 +5194,10 @@ PrefabInstance:
       propertyPath: attackMeter
       value: 
       objectReference: {fileID: 106586729}
+    - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
+      propertyPath: moveLerpTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8635090474716012735, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5848,11 +5852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: loopMeasures
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: startMeasure
-      value: 19
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: timingOffset
@@ -5860,11 +5864,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: loopEndMeasure
-      value: 21
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: loopStartMeasure
-      value: 19
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: startingSixteenth
@@ -6142,7 +6146,7 @@ PrefabInstance:
       objectReference: {fileID: 106586729}
     - target: {fileID: 4415969200110852366, guid: 4591d679700663e48b812466c114688f, type: 3}
       propertyPath: numMeasuresInLevel
-      value: 45
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 4415969200110852366, guid: 4591d679700663e48b812466c114688f, type: 3}
       propertyPath: sections.Array.size
