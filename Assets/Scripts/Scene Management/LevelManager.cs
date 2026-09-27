@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public int numMeasuresInLevel;
+    [Space(5)]
+    public float currentScore;
+    public float maxScore;
     
     [Header("UI Elements")]
     public ScoreKeeper scoreKeep;
@@ -93,6 +96,7 @@ public class LevelManager : MonoBehaviour
 
     public void EndLevel()
     {
+        scoreKeep.ReportScore();
         SceneManager.LoadScene("Report Card");
     }
 }

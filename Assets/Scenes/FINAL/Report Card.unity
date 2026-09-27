@@ -2402,6 +2402,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ca0fb77db402d4ba883c553eaa48ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Report
+  stats: {fileID: 11400000, guid: 2588f73980a8b07409ac38e3f96321ca, type: 2}
+  perfectText: {fileID: 1123182905}
+  goodText: {fileID: 982828167}
+  badText: {fileID: 859513698}
+  missText: {fileID: 166572504}
+  healthText: {fileID: 8383022}
+  damageText: {fileID: 473728070}
+  scoreText: {fileID: 1882736214}
 --- !u!1 &1882736212
 GameObject:
   m_ObjectHideFlags: 0
