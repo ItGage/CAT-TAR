@@ -2821,6 +2821,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 5502838178441247825}
+    - target: {fileID: 8029631637509767278, guid: 4591d679700663e48b812466c114688f, type: 3}
+      propertyPath: timeTillHitDisappear
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8082095579369008316, guid: 4591d679700663e48b812466c114688f, type: 3}
       propertyPath: m_Name
       value: LevelManager
