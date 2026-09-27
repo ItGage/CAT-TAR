@@ -47,7 +47,6 @@ public abstract class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerInteraction();
-            player.RegisterHit();
         }
         //checks if collided with end of track and destroys gameobject if true
         else if (other.CompareTag("End"))
@@ -68,6 +67,7 @@ public abstract class Interactable : MonoBehaviour
     {
         if (!hasDoneDamage)
         {
+            player.RegisterHit();
             hasDoneDamage = true;
             hp.TakeDmg(damage);
             Destroy(gameObject, FXTimer);

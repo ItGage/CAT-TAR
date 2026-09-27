@@ -3,7 +3,7 @@ using UnityEngine;
 public class ScoreKeeper : MonoBehaviour
 {
     [SerializeField] private HitPerformedUI ui;
-    private int perfectHits=0, goodHits=0, badHits=0, missedHits=0;
+    public int perfectHits=0, goodHits=0, badHits=0, missedHits=0;
     [SerializeField] private float timeTillHitDisappear=2f;
     private float timer = 0;
     private bool blank = true;

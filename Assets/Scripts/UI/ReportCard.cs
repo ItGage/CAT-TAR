@@ -1,7 +1,8 @@
 using UnityEngine;
 using TMPro;
 
-public abstract class ReportCard : ScriptableObject
+[CreateAssetMenu(fileName = "New Report Card", menuName = "ScriptableObjects/ReportCard", order = 1)]
+public class ReportCard : ScriptableObject
 {
     [Header("Level Stats")]
     [Tooltip("The maximum possible score in a level"), Min(0)]
