@@ -146,6 +146,8 @@ public class Player : MonoBehaviour
         desiredPositionPlayer = new Vector2(playerPos.x - moveDistance, playerPos.y);
         desiredPositionEdge = new Vector2(edgePos.x - moveDistance, edgePos.y);
 
+        playerAnimator.Play("MoveLeft");
+
         if (desiredPositionPlayer.x >= leftBounds && !isMoving)
         {
             MoveBoxCollider(desiredPositionPlayer);
@@ -158,6 +160,8 @@ public class Player : MonoBehaviour
     {
         desiredPositionPlayer = new Vector2(playerPos.x + moveDistance, playerPos.y);
         desiredPositionEdge = new Vector2(edgePos.x + moveDistance, edgePos.y);
+
+        playerAnimator.Play("MoveRight");
 
         if (desiredPositionPlayer.x <= rightBounds && !isMoving)
         {
@@ -206,6 +210,8 @@ public class Player : MonoBehaviour
 
         playerSprite.transform.position = endPos;
         isMoving = false;
+
+        playerAnimator.Play("Idle");
     }
 
     #endregion

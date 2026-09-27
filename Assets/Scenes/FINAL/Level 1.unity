@@ -749,6 +749,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6569202090553389547, guid: 324a7ad11f690aa4eacf832a65cae12a, type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6569202090553389547, guid: 324a7ad11f690aa4eacf832a65cae12a, type: 3}
       propertyPath: currentLevelManager
       value: 
       objectReference: {fileID: 1242567011}
@@ -1835,6 +1839,10 @@ PrefabInstance:
       propertyPath: attackMeter
       value: 
       objectReference: {fileID: 6371955270975631693}
+    - target: {fileID: 5612947507312957486, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
+      propertyPath: moveLerpTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8635090474716012735, guid: 2edfffcdefa5b7649894a9e187ccef04, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

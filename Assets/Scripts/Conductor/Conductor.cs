@@ -7,11 +7,23 @@ public class Conductor : MonoBehaviour
     public float secondsPerBeat;
     public float secondsPerSixteenth;
     public double songStartDSPTime;
-    
-    [Range(-1.0f,0.5f)]
-    public float timingOffset = 0f;
+
+    //[Range(-1.0f,0.5f)]
+    //public float timingOffset = 0f;
     //public float startOffsetInSec;
 
+    [Header("Song Start")]
+    [Min(1)]
+    public int startMeasure = 1;
+
+    [Header("Measure Looping")]
+    public bool loopMeasures = false;
+
+    [Min(1)]
+    public int loopStartMeasure = 1;
+
+    [Min(1)]
+    public int loopEndMeasure = 4;
 
     public AudioSource songPlayer;
 
@@ -53,9 +65,40 @@ public class Conductor : MonoBehaviour
     void Update()
     {
         if (!isSongPlaying) return;
-        songPositionInSeconds = songPositionInSeconds = (float)(AudioSettings.dspTime - songStartDSPTime) + timingOffset;
-        songPositionInSixteenths = songPositionInSeconds / secondsPerSixteenth;
-        totalSixteenth = (int)Mathf.Floor(songPositionInSixteenths);
+
+        songPositionInSeconds =
+            (float)(AudioSettings.dspTime - songStartDSPTime)/* + timingOffset*/;
+
+        songPositionInSixteenths =
+            songPositionInSeconds / secondsPerSixteenth;
+
+        totalSixteenth =
+            (int)Mathf.Floor(songPositionInSixteenths);
+
+        //----------------------------------------Measure Looping------------------------------------//
+
+        if (loopMeasures)
+        {
+            int loopEndSixteenth = loopEndMeasure * 16;
+
+            if (songPositionInSixteenths >= loopEndSixteenth)
+            {
+                int loopStartSixteenth = (loopStartMeasure - 1) * 16;
+
+                float loopStartTime =
+                    GetTimeAtSixteenth(loopStartSixteenth);
+
+                songPlayer.time = loopStartTime;
+
+                songStartDSPTime =
+                    AudioSettings.dspTime /*+ timingOffset*/ - loopStartTime;
+
+                //updates song position immediately after looping
+                songPositionInSeconds = loopStartTime;
+                songPositionInSixteenths = loopStartSixteenth;
+                totalSixteenth = loopStartSixteenth;
+            }
+        }
 
         if (totalSixteenth != previousSixteenth)
         {
@@ -71,10 +114,18 @@ public class Conductor : MonoBehaviour
 
     public void StartSong() 
     {
-        songStartDSPTime = AudioSettings.dspTime;
+        int startSixteenth = (startMeasure - 1) * 16;
+
+        float startTime =
+            GetTimeAtSixteenth(startSixteenth);
+
+        songPlayer.time = startTime;
+
+        songStartDSPTime =
+            AudioSettings.dspTime /*+ timingOffset */- startTime;
+
         songPlayer.Play();
         isSongPlaying = true;
-
     }
 
     //Gives Measure, Beat, and Sixteenth indexes
@@ -87,7 +138,7 @@ public class Conductor : MonoBehaviour
     {
         return totalSixteenth % 16;
     }
-    
+
     public int GetCurrentBeat()
     {
         return GetSixteenthInMeasure() /4;
@@ -97,7 +148,7 @@ public class Conductor : MonoBehaviour
     {
         return GetSixteenthInMeasure() % 4;
     }
-    
+
     //Gives time based on Measure, Beat, and/or Sixteenth indexes
     public float GetTimeAtPosition(int measure, int beat, int sixteenth)
     {
@@ -113,6 +164,5 @@ public class Conductor : MonoBehaviour
     {
         return totalSixteenth * secondsPerSixteenth;
     }
-
 
 }

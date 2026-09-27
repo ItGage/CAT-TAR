@@ -12,16 +12,43 @@ public class Launcher : MonoBehaviour
     [Space(5)]
     public float startingScale;
     public float endScale;
-   
+    
     private int nextSixteenthToLaunch = 0;
 
     private List<LaunchedObject> activeObjects = new();
 
+    //keeps track of every interactable spawned, including non-moveable ones
+    private List<Interactable> spawnedObjects = new();
+
     private Vector2 newPosition, newScale;
+
+    //used to detect when the song loops backwards
+    private float previousSongPosition;
+
+    void Start()
+    {
+        //starts reading the chart from the same measure as the conductor
+        nextSixteenthToLaunch =
+            (Conductor.instance.startMeasure - 1) * 16;
+
+        previousSongPosition =
+            Conductor.instance.songPositionInSixteenths;
+    }
 
     void Update()
     {
-        int launchAtSixteenth = nextSixteenthToLaunch - leadInSixteenths;
+        float currentSongPosition =
+            Conductor.instance.songPositionInSixteenths;
+
+        //----------------------------------------Loop Reset------------------------------------//
+
+        //if song position moves backwards, the conductor has looped
+        if (currentSongPosition < previousSongPosition)
+        {
+            ResetLauncherForLoop();
+        }
+
+        previousSongPosition = currentSongPosition;
 
         //----------------------------------------Spawning Section------------------------------------//
 
@@ -65,6 +92,9 @@ public class Launcher : MonoBehaviour
                         spawnPoints[laneIndex].position,
                         spawnPoints[laneIndex].rotation
                     );
+
+                    //tracks every spawned interactable so loops can clear the screen
+                    spawnedObjects.Add(spawnedObject);
 
                     /*
                     Debug.Log
@@ -146,5 +176,27 @@ public class Launcher : MonoBehaviour
 
             launchedObject.interactable.transform.localScale = newScale;
         }
+    }
+
+    //----------------------------------------Loop Reset------------------------------------//
+
+    private void ResetLauncherForLoop()
+    {
+        //removes every interactable left over from the previous loop
+        for (int i = spawnedObjects.Count - 1; i >= 0; i--)
+        {
+            if (spawnedObjects[i] != null)
+            {
+                spawnedObjects[i].gameObject.SetActive(false);
+                Destroy(spawnedObjects[i].gameObject);
+            }
+        }
+
+        spawnedObjects.Clear();
+        activeObjects.Clear();
+
+        //starts reading the chart again from the beginning of the loop
+        nextSixteenthToLaunch =
+            (Conductor.instance.loopStartMeasure - 1) * 16;
     }
 }
