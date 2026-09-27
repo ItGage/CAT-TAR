@@ -5862,7 +5862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: startMeasure
-      value: 26
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: timingOffset
@@ -5874,7 +5874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: loopStartMeasure
-      value: 26
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: startingSixteenth
@@ -5883,7 +5883,7 @@ PrefabInstance:
     - target: {fileID: 6757831621270759811, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 76d363a5b05eefe4abb1ad498c90a436, type: 3}
+      objectReference: {fileID: 8300000, guid: 5531d00e50ddc5a4a8c0ea1d96072726, type: 3}
     - target: {fileID: 7356288978536191393, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: m_Name
       value: Conductor
@@ -6143,6 +6143,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 683754723}
     - target: {fileID: 4415969200110852366, guid: 4591d679700663e48b812466c114688f, type: 3}
+      propertyPath: sectionIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415969200110852366, guid: 4591d679700663e48b812466c114688f, type: 3}
       propertyPath: attackMeterUI
       value: 
       objectReference: {fileID: 723113771}
@@ -6152,7 +6156,7 @@ PrefabInstance:
       objectReference: {fileID: 106586729}
     - target: {fileID: 4415969200110852366, guid: 4591d679700663e48b812466c114688f, type: 3}
       propertyPath: numMeasuresInLevel
-      value: 68
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4415969200110852366, guid: 4591d679700663e48b812466c114688f, type: 3}
       propertyPath: sections.Array.size

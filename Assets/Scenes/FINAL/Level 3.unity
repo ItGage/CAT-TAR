@@ -2416,7 +2416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: startMeasure
-      value: 50
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: timingOffset
