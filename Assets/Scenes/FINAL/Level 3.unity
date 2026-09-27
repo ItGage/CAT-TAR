@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 396409541}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -40, z: 0}
+  m_LocalPosition: {x: 0, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -782,7 +782,7 @@ Transform:
   m_GameObject: {fileID: 1254602663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -65, y: -40, z: 0}
+  m_LocalPosition: {x: -65, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -905,7 +905,7 @@ Transform:
   m_GameObject: {fileID: 1362653888}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.5, y: -40, z: 0}
+  m_LocalPosition: {x: -32.5, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1455,7 +1455,7 @@ Transform:
   m_GameObject: {fileID: 1545970408}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.5, y: -40, z: 0}
+  m_LocalPosition: {x: 32.5, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1486,7 +1486,7 @@ Transform:
   m_GameObject: {fileID: 1618965355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65, y: -40, z: 0}
+  m_LocalPosition: {x: 65, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2468,7 +2468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: timingOffset
-      value: -0.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: startingSixteenth
@@ -2477,7 +2477,7 @@ PrefabInstance:
     - target: {fileID: 6757831621270759811, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: db1676913a2a3034cac0291e6e1efe9f, type: 3}
+      objectReference: {fileID: 8300000, guid: bb2cb5a9586a3164eae23be7f3b06317, type: 3}
     - target: {fileID: 7356288978536191393, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: m_Name
       value: Conductor
@@ -2495,22 +2495,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
-      propertyPath: endScale
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
-      propertyPath: songChart
-      value: 
-      objectReference: {fileID: 11400000, guid: 5d73f8cc4abf8a54cbe7f0584daf10ad, type: 2}
-    - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
-      propertyPath: startingScale
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
-      propertyPath: leadInSixteenths
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: nextSixteenthToLaunch
       value: 300

@@ -702,7 +702,7 @@ MonoBehaviour:
   perfect: {fileID: 5560332376728325023}
   perfectSFX: {fileID: 8300000, guid: 094ccba219405f14fbd140142af5cf05, type: 3}
   goodSFX: {fileID: 8300000, guid: 094ccba219405f14fbd140142af5cf05, type: 3}
-  badSFX: {fileID: 8300000, guid: 094ccba219405f14fbd140142af5cf05, type: 3}
+  badSFX: {fileID: 8300000, guid: bf6ab174704fd364d888fb276e44c29d, type: 3}
   wrongSFX: {fileID: 8300000, guid: caa981b12d0e800449d0162bc8c160cc, type: 3}
   missedSFX: {fileID: 8300000, guid: caa981b12d0e800449d0162bc8c160cc, type: 3}
   srGlow: {fileID: 7875193259547829810}

@@ -175,7 +175,7 @@ public class Arrow : Interactable
         else if (perfect.GetInTrigger())
         {
             scoreKeep.AddPerfectHit();
-            audioPlayer.PlayOneShot(perfectSFX);
+            //audioPlayer.PlayOneShot(perfectSFX);
             attackMeter.PerfectHit();
         }
         else if (goodLate.GetInTrigger())
