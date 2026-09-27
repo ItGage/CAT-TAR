@@ -724,7 +724,7 @@ MonoBehaviour:
   attackMeter: {fileID: 0}
   isMoving: 0
   moveDistance: 35
-  moveLerpTime: 0.1
+  moveLerpTime: 0.2
   jumpDistance: 3
   jumpTime: 0.7
   parryTime: 0.25
