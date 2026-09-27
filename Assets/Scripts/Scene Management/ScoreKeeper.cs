@@ -7,6 +7,7 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] private float timeTillHitDisappear=2f;
     private float timer = 0;
     private bool blank = true;
+    public ReportCard reportCard;
 
     private void Update()
     {
@@ -16,6 +17,7 @@ public class ScoreKeeper : MonoBehaviour
             Blank();
         }
     }
+
     public void AddPerfectHit()
     {
         perfectHits++;
@@ -23,6 +25,7 @@ public class ScoreKeeper : MonoBehaviour
         blank = false;
         ResetTimer();
     }
+
     public void AddGoodHit(string timing)
     {
         goodHits++;
@@ -30,6 +33,7 @@ public class ScoreKeeper : MonoBehaviour
         blank = false;
         ResetTimer();
     }
+
     public void AddBadHit(string timing)
     {
         badHits++;
@@ -37,6 +41,7 @@ public class ScoreKeeper : MonoBehaviour
         blank = false;
         ResetTimer();
     }
+
     public void AddMissedHit()
     {
         missedHits++;
@@ -52,9 +57,20 @@ public class ScoreKeeper : MonoBehaviour
     {
         timer = 0;
     }
+
     public void Blank()
     {
         UpdateUI("", "");
+    }
+
+    public void ReportScore()
+    {
+        reportCard.SetPerfectHits(perfectHits);
+        reportCard.SetGoodHits(goodHits);
+        reportCard.SetBadHits(badHits);
+        reportCard.SetMissedHits(missedHits);
+
+        reportCard.SetHealth(GameManager.gm.player.GetHealth().getHP());
     }
 
 }
