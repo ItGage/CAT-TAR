@@ -4,21 +4,38 @@ public class ScoreKeeper : MonoBehaviour
 {
     [SerializeField] private HitPerformedUI ui;
     private int perfectHits=0, goodHits=0, badHits=0, missedHits=0;
+    [SerializeField] private float timeTillHitDisappear=2f;
+    private float timer = 0;
+    private bool blank = true;
 
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer>=timeTillHitDisappear && !blank)
+        {
+            Blank();
+        }
+    }
     public void AddPerfectHit()
     {
         perfectHits++;
         UpdateUI("Perfect!", "");
+        blank = false;
+        ResetTimer();
     }
     public void AddGoodHit(string timing)
     {
         goodHits++;
         UpdateUI("Good", timing);
+        blank = false;
+        ResetTimer();
     }
     public void AddBadHit(string timing)
     {
         badHits++;
         UpdateUI("Bad.", timing);
+        blank = false;
+        ResetTimer();
     }
     public void AddMissedHit()
     {
@@ -29,6 +46,15 @@ public class ScoreKeeper : MonoBehaviour
     public void UpdateUI(string hit, string timing)
     {
         ui.UpdateUI(hit, timing);
+    }
+
+    public void ResetTimer()
+    {
+        timer = 0;
+    }
+    public void Blank()
+    {
+        UpdateUI("", "");
     }
 
 }
