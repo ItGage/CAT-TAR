@@ -1259,6 +1259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelSection
   sectionType: 1
   startMeasure: 9
+  attackMeter: {fileID: 0}
 --- !u!1 &1545970408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelSection
   sectionType: 0
   startMeasure: 17
+  attackMeter: {fileID: 0}
 --- !u!4 &1659262950
 Transform:
   m_ObjectHideFlags: 0
@@ -2333,7 +2335,7 @@ PrefabInstance:
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: songChart
       value: 
-      objectReference: {fileID: 11400000, guid: e693ae56023741b42b8ea3a2d9f18e6c, type: 2}
+      objectReference: {fileID: 11400000, guid: ca26c72259e282649b4ba953f4667540, type: 2}
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: startingScale
       value: 0.75

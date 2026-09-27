@@ -1025,7 +1025,7 @@ Transform:
   m_GameObject: {fileID: 396409541}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -40, z: 0}
+  m_LocalPosition: {x: 0, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1592,6 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackMeter
   duration: 0
+  damageIfFailed: 0
   currentScore: 0
   targetScore: 125
   maxScore: 180
@@ -3113,7 +3114,7 @@ Transform:
   m_GameObject: {fileID: 1254602663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -65, y: -40, z: 0}
+  m_LocalPosition: {x: -65, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3464,6 +3465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackMeter
   duration: 0
+  damageIfFailed: 0
   currentScore: 0
   targetScore: 200
   maxScore: 310
@@ -3536,7 +3538,7 @@ Transform:
   m_GameObject: {fileID: 1362653888}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.5, y: -40, z: 0}
+  m_LocalPosition: {x: -31.6, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4172,6 +4174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackMeter
   duration: 0
+  damageIfFailed: 0
   currentScore: 0
   targetScore: 75
   maxScore: 130
@@ -4593,7 +4596,7 @@ Transform:
   m_GameObject: {fileID: 1545970408}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.5, y: -40, z: 0}
+  m_LocalPosition: {x: 32.1, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4624,7 +4627,7 @@ Transform:
   m_GameObject: {fileID: 1618965355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65, y: -40, z: 0}
+  m_LocalPosition: {x: 65, y: -40.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5845,7 +5848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: timingOffset
-      value: -0.105
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1168603207538278806, guid: 82ecf0ff67ef86f4f8537d86a2d32f8f, type: 3}
       propertyPath: startingSixteenth
@@ -5879,7 +5882,7 @@ PrefabInstance:
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: songChart
       value: 
-      objectReference: {fileID: 11400000, guid: 57a63a8b60c27f545a82572fe3d3e0dd, type: 2}
+      objectReference: {fileID: 11400000, guid: e693ae56023741b42b8ea3a2d9f18e6c, type: 2}
     - target: {fileID: 839914843318883854, guid: b8f994cb472b77c49a084ad2893cdaee, type: 3}
       propertyPath: startingScale
       value: 0.75
