@@ -20,4 +20,20 @@ public class BossAnimator : MonoBehaviour
             bossAnim.Play("Boss 3 Play");
         }
     }
+
+    public void DamageBoss()
+    {
+        if (bossNum == 1)
+        {
+            bossAnim.Play("Boss 1 Hurt");
+        }
+        else if (bossNum == 2)
+        {
+            bossAnim.Play("Boss 2 Hurt");
+        }
+        else if (bossNum == 3)
+        {
+            bossAnim.Play("Boss 3 Hurt");
+        }
+    }
 }

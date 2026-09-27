@@ -29,6 +29,10 @@ public class AttackMeter : MonoBehaviour
     [SerializeField] private GameObject top;
     [SerializeField] private GameObject bottom;
 
+    [Header("FX")]
+    public BossAnimator boss;
+    public Player player;
+
     private void Start()
     {
         threshold = targetScore / maxScore;
@@ -105,6 +109,7 @@ public class AttackMeter : MonoBehaviour
         if(currentScore / maxScore >= threshold)
         {
             Debug.Log("Threshold Met! Damaging Boss!");
+            boss.DamageBoss();
         }
         else
         {

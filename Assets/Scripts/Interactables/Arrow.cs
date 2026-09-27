@@ -205,7 +205,6 @@ public class Arrow : Interactable
     {
         Debug.Log("Incorrect arrow hit");
         //change sprite to faded sprite
-        player.RegisterHit();
         audioPlayer.PlayOneShot(wrongSFX);
         scoreKeep.AddMissedHit();
         missed = true;
