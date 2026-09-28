@@ -70,7 +70,12 @@ public class ScoreKeeper : MonoBehaviour
         reportCard.SetBadHits(badHits);
         reportCard.SetMissedHits(missedHits);
 
-        reportCard.SetHealth(GameManager.gm.player.GetHealth().getHP());
+        var playerHealth = GameManager.gm.player.GetHealth();
+        var levelManager = GameManager.gm.currentLevelManager;
+
+        reportCard.SetHealth(playerHealth.getHP());
+        reportCard.SetDamage(playerHealth.totalDamageTaken);
+        reportCard.SetScore(levelManager.currentScore);
     }
 
 }

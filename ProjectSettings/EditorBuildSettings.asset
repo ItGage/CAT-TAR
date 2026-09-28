@@ -9,17 +9,23 @@ EditorBuildSettings:
     path: Assets/Scenes/FINAL/Main Menu.unity
     guid: dad4d8887cf72d145a7dbe1d7147cb4e
   - enabled: 1
-    path: Assets/Scenes/FINAL/Level 1.unity
-    guid: f0ff56bed125edb4c8a727fd7245ccb9
-  - enabled: 1
     path: Assets/Scenes/FINAL/Boss Approaches 1.unity
     guid: 2700ccd957726a14ca53b593f0fcb06b
+  - enabled: 1
+    path: Assets/Scenes/FINAL/Level 1.unity
+    guid: f0ff56bed125edb4c8a727fd7245ccb9
   - enabled: 1
     path: Assets/Scenes/FINAL/Boss Approaches 2.unity
     guid: cb5bc9f65cee3d240a23bf07ea8f1e68
   - enabled: 1
+    path: Assets/Scenes/FINAL/Level 2.unity
+    guid: b93eb52138303954a8215754294fac75
+  - enabled: 1
     path: Assets/Scenes/FINAL/Boss Approaches 3.unity
     guid: 29f17895a26b24b41b8a44c02834b1c6
+  - enabled: 1
+    path: Assets/Scenes/FINAL/Level 3.unity
+    guid: 90834ba487c9e5c4da018035eba65e71
   - enabled: 1
     path: Assets/Scenes/FINAL/Report Card.unity
     guid: d6eefabcc2998ab43aca7edf75720c7b

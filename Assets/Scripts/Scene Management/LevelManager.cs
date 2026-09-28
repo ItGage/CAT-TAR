@@ -3,10 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public int levelNum;
+    [Space(5)]
     public int numMeasuresInLevel;
     [Space(5)]
     public float currentScore;
     public float maxScore;
+    [Space(10)]
+    public ReportCard reportCard;
     
     [Header("UI Elements")]
     public ScoreKeeper scoreKeep;
@@ -29,7 +33,10 @@ public class LevelManager : MonoBehaviour
         SetCurrentSection();
         CheckSection();
 
+        reportCard.SetMaxScore(maxScore);
+        reportCard.SetMaxHits(maxScore / 10f);
         GameManager.gm.currentLevelManager = this;
+        GameManager.gm.currentLevel = levelNum;
     }
 
     private void Update()
@@ -51,6 +58,7 @@ public class LevelManager : MonoBehaviour
 
         if(currentMeasure == numMeasuresInLevel + 1)
         {
+            currentSection.attackMeter.CheckThreshold();
             EndLevel();
         }
     }
@@ -85,13 +93,19 @@ public class LevelManager : MonoBehaviour
 
     public void ActivateAttackMeter()
     {
-        currentSection.attackMeter.slider.gameObject.SetActive(true);
+        if(currentSection.attackMeter != null)
+        {
+            currentSection.attackMeter.slider.gameObject.SetActive(true);
+        }
     }
 
     public void DeactivateAttackMeter()
     {
-        currentSection.attackMeter.CheckThreshold();
-        currentSection.attackMeter.slider.gameObject.SetActive(false);
+        if (currentSection.attackMeter != null)
+        {
+            currentSection.attackMeter.CheckThreshold();
+            currentSection.attackMeter.slider.gameObject.SetActive(false);
+        }
     }
 
     public void EndLevel()

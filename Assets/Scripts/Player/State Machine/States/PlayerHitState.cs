@@ -17,6 +17,10 @@ public class PlayerHitState : PlayerBaseState
 
         // Set Animation State
         player.SetAnimation("Hit");
+
+        // Subscribe Listeners
+        input.MoveLeftPerformed += player.MovePlayerLeft;
+        input.MoveLeftPerformed += player.MovePlayerRight;
     }
 
     public override void Tick()
@@ -35,5 +39,9 @@ public class PlayerHitState : PlayerBaseState
     public override void Exit()
     {
         Debug.Log("Exiting 'Hit State''");
+
+        // Subscribe Listeners
+        input.MoveLeftPerformed -= player.MovePlayerLeft;
+        input.MoveLeftPerformed -= player.MovePlayerRight;
     }
 }

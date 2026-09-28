@@ -160,7 +160,7 @@ public class Arrow : Interactable
         Debug.Log("Correct arrow hit");
         //adds to the attack meter (number of correct attacks)
         //Still need to add to score keeper
-        if (badEarly.GetInTrigger())
+        if (badEarly.GetInTrigger() && attackMeter != null)
         {
             scoreKeep.AddBadHit("Early");
             audioPlayer.PlayOneShot(badSFX);

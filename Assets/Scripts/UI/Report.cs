@@ -32,13 +32,13 @@ public class Report : MonoBehaviour
         switch(GameManager.gm.currentLevel)
         {
             case (0):
-                SceneManager.LoadScene("Level 1");
+                SceneManager.LoadScene("Boss Approaches 1");
                 break;
             case (1):
-                SceneManager.LoadScene("Level 2");
+                SceneManager.LoadScene("Boss Approaches 2");
                 break;
             case (2):
-                SceneManager.LoadScene("Level 3");
+                SceneManager.LoadScene("Boss Approaches 3");
                 break;
             case (3):
                 SceneManager.LoadScene("Main Menu");

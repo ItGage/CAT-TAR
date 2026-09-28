@@ -12,18 +12,24 @@ public class Health : MonoBehaviour
 
    [SerializeField] private AudioSource audioPlayer;
 
+    public float totalDamageTaken;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHp = maxHp;
         sParryCount = 0;
         hpUI.SetHP(currentHp);
+        totalDamageTaken = 0;
     }
 
     public void TakeDmg(float dmg)
     {
         currentHp -= dmg;
+        totalDamageTaken += dmg;
         hpUI.SetHP(currentHp);
+
+        GameManager.gm.player.RegisterHit();
 
         audioPlayer.Play();
 

@@ -33,6 +33,16 @@ public class ReportCard : ScriptableObject
     [Tooltip("Total damage the player took throughout the level"), Min(0)]
     public float damage;
 
+    public void SetMaxHits(float hits)
+    {
+        maxHits = hits;
+    }
+
+    public void SetMaxScore(float score)
+    {
+        maxScore = score;
+    }
+
     public void SetScore(float lvlScore)
     {
         score = lvlScore;

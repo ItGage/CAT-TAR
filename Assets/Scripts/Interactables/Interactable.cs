@@ -67,7 +67,6 @@ public abstract class Interactable : MonoBehaviour
     {
         if (!hasDoneDamage)
         {
-            player.RegisterHit();
             hasDoneDamage = true;
             hp.TakeDmg(damage);
             Destroy(gameObject, FXTimer);
